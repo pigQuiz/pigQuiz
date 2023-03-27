@@ -36,11 +36,17 @@ const imgs = [
 
 
 function showimg () {
-    const randomImg = imgs[Math.floor(Math.random() * imgs.length )];
-    const krimg = document.createElement("img");
-    krimg.src = `img/${randomImg}`;
+    let randomImg = Math.floor(Math.random() * imgs.length );
+    let randomBox = document.getElementById("foodimg");
+
+    randomBox.src = `${randomImg}`;
     const foodImge = document.querySelector(".imgbox");
     foodImge.appendChild(krimg);
 }
 
+
+// showimg (()=>{ 
+//     let radomImg = Math.floor(Math.random() * imgs.length);
+//     randomBox.src = imgs[radomImg];
+// },2000);
 
