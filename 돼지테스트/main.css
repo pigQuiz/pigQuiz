@@ -79,6 +79,7 @@ body .mainbox {
     float: right;
     width: 48%;
     height: auto;
+    padding: 20px;
     box-sizing: border-box;
     margin-left: 10px;
     margin-top: 20px;
@@ -98,17 +99,28 @@ body .mainbox {
 }
 .mainbox .scorebox .score {
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 20px;
+}
+.mainbox .scorebox .timer{
+    height: 100px;
+    margin-top: 50px;
+    display: none;
 }
 .mainbox .scorebox .start {
     font-size: 30px;
     border: 2px solid #000;
     border-radius: 20px;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom: 30px;
     padding: 1%;
     width: 100px;
     height: 100px;
     text-align: center;
+    cursor: pointer;
+}
+/* 시작 버튼 누르면 버튼이 사라짐 */
+.hidden{ 
+    position: absolute;
+    visibility: hidden;
 }
