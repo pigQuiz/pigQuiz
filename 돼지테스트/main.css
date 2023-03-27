@@ -90,7 +90,7 @@ body .mainbox {
     height: 30px;
     margin: 30px auto;
 }
-.mainbox .scorebox .inputbox #text {
+.mainbox .scorebox .inputbox #answer {
     width: auto;
     height: 25px;
     font-size: 20px;
