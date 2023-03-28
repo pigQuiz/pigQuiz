@@ -1,5 +1,4 @@
-
-let Korean;
+@importrt Korean from '../돼지테스트/foodlist1'
 let China;
 let Japan;
 let Western;
@@ -35,18 +34,11 @@ const imgs = [
 ];
 
 
-function showimg () {
-    let randomImg = Math.floor(Math.random() * imgs.length );
-    let randomBox = document.getElementById("foodimg");
+// function showimg () {
+//     let randomImg = Math.floor(Math.random() * imgs.length );
+//     let randomBox = document.getElementById("foodimg");
 
-    randomBox.src = `${randomImg}`;
-    const foodImge = document.querySelector(".imgbox");
-    foodImge.appendChild(krimg);
-}
-
-
-// showimg (()=>{ 
-//     let radomImg = Math.floor(Math.random() * imgs.length);
-//     randomBox.src = imgs[radomImg];
-// },2000);
-
+//     randomBox.src = `${randomImg}`;
+//     const foodImge = document.querySelector(".imgbox");
+//     foodImge.appendChild(krimg);
+// }
