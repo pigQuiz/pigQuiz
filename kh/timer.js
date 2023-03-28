@@ -23,6 +23,8 @@ function makeGameData(){
                     const $timeSelect = document.querySelector('.timeSelect').value;
                     return $timeSelect;
                     }, //선택된 제한시간
+                timeImgSecond: 3,
+                timeSecond: null,
                 
     };
 }
@@ -32,19 +34,36 @@ startBtn.onclick = function(){ // start버튼 누르면 사라지는 함수
     startBtn.classList.add('hidden');
     $timer.style.display = 'block';
     // alert($time);
-    $foodimg.setAttribute('src','../img/loop.jpg');
+    // $foodimg.setAttribute('src','../img/loop.jpg');
     // $imgbox.textContent = '1';
 
-    $inputAnswer.value = '';// 입력하세요 없애기
-    $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치
-
-    let time = setInterval(function(){ // 난이도에 따라 타이머 설정
+    let timeImgStart = +makeGameData().timeImgSecond;
+    let timeImg = setInterval(function(){
+        $imgbox.textContent = timeImgStart;
+        timeImgStart--;
+        if(timeImgStart === 0){
+            makeGameData().timeImgSecond = timeImgStart;
+            clearInterval(timeImg);
+        }
+        return timeImgStart;
+    },1000);
+    setTimeout(() => {
+        let timeSurv = setInterval(function(){ // 난이도에 따라 타이머 설정
             $time--;
             $timer.textContent = `남은시간 : ${$time}`;
             if($time === 0){
-                clearInterval(time);
+                clearInterval(timeSurv);
             }
-        },1000);
+            $inputAnswer.value = '';// 입력하세요 없애기
+            $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치
+            console.log(makeGameData().timeImgSecond);
+        },1000);    
+    }, 3000);
+    
+    
 };
-
-
+    
+    
+    
+    
+    
