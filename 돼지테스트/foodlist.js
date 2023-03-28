@@ -1,3 +1,5 @@
+
+
 const korea = {
  삼겹살 : ['삼겹살'],
  순대국 : ['순대국'],
@@ -87,3 +89,40 @@ const Western = {
     라쟈냐 :['라쟈냐'],
    
 }
+
+
+const  $course = [...document.querySelectorAll('.kind > li')];
+
+const selectedCourse = [];
+console.log($course);
+
+$course.forEach(($li, idx) => {
+
+    if($li[idx].value === '한식') $li[idx].onclick = () => {
+        selectedCourse = korea;
+    } 
+    else if($li[idx].value === '일식') {
+        $li[idx].onclick = () => {
+            selectedCourse = Japan;
+        }
+    }
+    else if($li[idx].value === '양식') {
+        $li[idx].onclick = () => {
+            selectedCourse = Western;
+        }
+    }
+    else if($li[idx].value === '전체') {
+        $li[idx].onclick = ()  => {
+            selectedCourse = korea.concat(Japan,China,Western);
+        }
+    }
+    else {
+        $li[idx].onclick = () => {
+            selectedCourse = China;
+        }
+    }
+});
+
+function showimg(selectedCourse)  {
+    selectedCourse
+};
