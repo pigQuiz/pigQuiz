@@ -70,6 +70,51 @@ const korea = [
 
    ];
 
+   const  $course = [...document.querySelectorAll('.kind > li')];
+
+   const $level = document.querySelector('.levelselect');
+   
+   $level.onclick = function () {
+    const $catalog = document.querySelector('.kind');
+    // if($catalog.attributes('style') == 'none' ){
+    // }
+    $catalog.style.display = 'block';
+   }
+   const selectedCourse = [];
+   console.log($course);
+   
+   $course.forEach(($li, idx) => {
+   
+       if($li[idx].value === '한식') $li[idx].onclick = () => {
+           selectedCourse = korea;
+           imgMatch(selectedCourse);
+        } 
+        else if($li[idx].value === '일식') {
+            $li[idx].onclick = () => {
+                selectedCourse = Japan;
+                imgMatch(selectedCourse);
+            }
+        }
+        else if($li[idx].value === '양식') {
+            $li[idx].onclick = () => {
+                selectedCourse = Western;
+                imgMatch(selectedCourse);
+            }
+        }
+        else if($li[idx].value === '전체') {
+            $li[idx].onclick = ()  => {
+                selectedCourse = korea.concat(Japan,China,Western);
+                imgMatch(selectedCourse);
+            }
+        }
+        else {
+            $li[idx].onclick = () => {
+                selectedCourse = China;
+                imgMatch(selectedCourse);
+           }
+       }
+   });
+
 //    function randomFood(){
 //   const  randomimg  = Math.floor(Math.random() * korea.length) + 1;
 //    document.querySelector('#foodimg').classList.add(korea[randomFood]);
@@ -80,6 +125,27 @@ const korea = [
 // randomFood();
 
 
+//이미지 랜덤 함수 생성
+function randomFood(){
+    let foodimg = Math.round(Math.random() * selectedCourse.length);
+    return foodimg;   
+}
+
+const $correct = document.querySelector('.correct');
+//이미지와 input박스 답 체크하기
+function imgMatch(selectedCourse) {
+    const imgNum = randomFood();
+    const selectedFood = selectedCourse[imgNum].img
+    var arrUrl  = selectedFood.split("/");
+    var FileNameplus = arrUrl[arrUrl.length - 1]; //나누어진 배열의 맨 끝이 파일명
+    var arSplitFileName   = FileNameplus.split("."); //파일명을 다시 "."로 나누어 확장자랑 쪼갬
+    var FileName = arSplitFileName[0]; //파일이름
+    if(FileName === document.getElementById('answer')){
+        $correct.value = `정답입니다!!`;
+    } else {
+        $correct.value = `틀렸습니다!!`;
+    }
+}
 
 function rdimg() {
     let foodimg = Math.round(Math.random() * 26);
@@ -92,4 +158,4 @@ function rdimg() {
 
 // console.log(rdimg())
 
-rdimg();
+// rdimg();
