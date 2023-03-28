@@ -1,3 +1,5 @@
+import * as foodList from '../돼지테스트/foodlist1.js';
+
 function makeGameData() {
     const $timeSelect = document.querySelector('.timeSelect');
 
@@ -28,19 +30,23 @@ function startGameBtn(startGame) {
             $imgbox.textContent = timeImgStart;
             $imgbox.setAttribute('value', timeImgStart);
             timeImgStart--;
-            if (timeImgStart === 0) {
-                makeGameData().timeImgSecond = timeImgStart;
+            if (timeImgStart === -1) {
+                $imgbox.textContent ='';
+                let $newImg = document.createElement('img');
+            $newImg.setAttribute('id','foodimg');
+            $imgbox.appendChild($newImg);
+            foodList.rdimg();
                 clearInterval(timeImg);
             }
             return timeImgStart;
         }, 1000);
-
             const $inputAnswer = document.getElementById('answer');
             let $time = startGame.timeSelect();
+            
             setTimeout(() => {
                 let timeSurv = setInterval(function () { // 난이도에 따라 타이머 설정
-                    $time--;
                     $timer.setAttribute('value',$time);
+                    $time--;
                     $timer.textContent = `남은시간 : ${$time}`;
                     if ($time === 0) {
                         clearInterval(timeSurv);
@@ -48,6 +54,7 @@ function startGameBtn(startGame) {
                     $inputAnswer.value = ''; // 입력하세요 없애기
                     $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치
                 }, 1000);
+                
             }, 3000);
     }
 }
