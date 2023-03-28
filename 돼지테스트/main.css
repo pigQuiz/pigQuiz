@@ -122,12 +122,14 @@ body .mainbox {
     height: 100px;
     text-align: center;
 
+
     cursor: pointer;
 }
 /* 시작 버튼 누르면 버튼이 사라짐 */
 .hidden{ 
     position: absolute;
     visibility: hidden;
+
 }
 
 /*음식종류 카테고리  */
@@ -136,12 +138,12 @@ body .mainbox {
     /* border: 1px solid #000; */
     height: 400px;
     width: 100%;
-    background: orange;
+    /* background: orange; */
     position: absolute;
     
 }
 .kind li{
-    /* display: none; */
+    display: none;
     float: left;
     color: #000;
     font-size: 50px;

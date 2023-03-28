@@ -1,4 +1,5 @@
-@importrt Korean from '../돼지테스트/foodlist1'
+@import Korean from '../돼지테스트/foodlist1'
+
 let China;
 let Japan;
 let Western;
