@@ -34,11 +34,11 @@ const imgs = [
 ];
 
 
-// function showimg () {
-//     let randomImg = Math.floor(Math.random() * imgs.length );
-//     let randomBox = document.getElementById("foodimg");
+function showimg () {
+    let randomImg = Math.floor(Math.random() * imgs.length );
+    let randomBox = document.getElementById("foodimg");
 
-//     randomBox.src = `${randomImg}`;
-//     const foodImge = document.querySelector(".imgbox");
-//     foodImge.appendChild(krimg);
-// }
+    randomBox.src = `${randomImg}`;
+    const foodImge = document.querySelector(".imgbox");
+    foodImge.appendChild(krimg);
+}
