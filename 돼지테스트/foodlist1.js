@@ -75,12 +75,12 @@ const korea = [
    const $level = document.querySelector('.levelselect');
    
    //코스 선택하면 카테고리 보이기
-   const $catalog = document.querySelector('.kind  li');
-   
+   const $catalog = document.querySelector('.kind li');
+
    $level.onclick = function () {
     // if($catalog.attributes('style') == 'none' ){
     // }
-    $catalog.style.display = 'block';
+    $catalog.style.visibility = 'visible';
    }
    
    const selectedCourse = [];
