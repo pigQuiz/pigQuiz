@@ -70,27 +70,34 @@ const korea = [
 
    ];
 
-   const  $course = [...document.querySelectorAll('.kind > li')];
 
    const $level = document.querySelector('.levelselect');
    
    //코스 선택하면 카테고리 보이기
-   const $catalog = document.querySelector('.kind li');
+
+   
+   const $catalog = [...document.querySelectorAll('.kind li')];
 
    $level.onclick = function () {
+    console.log('kllll');
     // if($catalog.attributes('style') == 'none' ){
     // }
-    $catalog.style.visibility = 'visible';
+    $catalog.forEach(($li) => {
+        $li.style.visibility = 'visible';
+    });
+    // $catalog.style.visibility = 'visible';
    }
-   
+
    const selectedCourse = [];
-   console.log($course);
+  
    
-   $course.forEach(($li, idx) => {
+   $catalog.forEach(($li, idx) => {
    
-       if($li[idx].value === '한식') $li[idx].onclick = () => {
-           selectedCourse = korea;
-           imgMatch(selectedCourse);
+       if($li[idx].value === '한식') {
+            $li[idx].onclick = () => {
+                selectedCourse = korea;
+                imgMatch(selectedCourse);
+            }
         } 
         else if($li[idx].value === '일식') {
             $li[idx].onclick = () => {
@@ -133,7 +140,10 @@ function randomFood(){
     let foodimg = Math.round(Math.random() * selectedCourse.length);
     return foodimg;   
 }
-
+//점수 계산하기 
+var count =0;
+const $score = document.querySelector('.score');
+//
 const $correct = document.querySelector('.correct');
 //이미지와 input박스 답 체크하기
 function imgMatch(selectedCourse) {
@@ -143,10 +153,14 @@ function imgMatch(selectedCourse) {
     var FileNameplus = arrUrl[arrUrl.length - 1]; //나누어진 배열의 맨 끝이 파일명
     var arSplitFileName   = FileNameplus.split("."); //파일명을 다시 "."로 나누어 확장자랑 쪼갬
     var FileName = arSplitFileName[0]; //파일이름
-    if(FileName === document.getElementById('answer')){
-        $correct.value = `정답입니다!!`;
+    if(FileName === document.getElementById('answer').value){
+        $correct.textContent = '정답입니다!!';
+        count++;
+        $score.style.width = 
+        $score.innerHTML += `: ${count} 점`;
+            
     } else {
-        $correct.value = `틀렸습니다!!`;
+        $correct.textContent = '땡!!';
     }
 }
 
