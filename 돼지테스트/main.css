@@ -65,6 +65,8 @@ body .mainbox {
     box-sizing: border-box;
     padding: 10px 5px;
     border-radius: 15px;
+    font-size: 300px;
+    font-weight: 700;
 }
 .mainbox .imgbox img {
     object-fit: cover;

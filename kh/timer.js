@@ -9,6 +9,10 @@ const startBtn = document.querySelector('.start');//시작버튼
 const $scoreBox = document.querySelector('.scorebox');
 const $timer = document.querySelector('.timer');
 const $timeSelect = document.querySelector('.timeSelect');
+const $foodimg = document.getElementById('foodimg');
+const $imgbox = document.querySelector('.imgbox');
+const $inputAnswer = document.getElementById('answer');
+
 
 // const makeData = makeGameData();
 
@@ -28,6 +32,11 @@ startBtn.onclick = function(){ // start버튼 누르면 사라지는 함수
     startBtn.classList.add('hidden');
     $timer.style.display = 'block';
     // alert($time);
+    $foodimg.setAttribute('src','../img/loop.jpg');
+    // $imgbox.textContent = '1';
+
+    $inputAnswer.value = '';// 입력하세요 없애기
+    $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치
 
     let time = setInterval(function(){ // 난이도에 따라 타이머 설정
             $time--;
