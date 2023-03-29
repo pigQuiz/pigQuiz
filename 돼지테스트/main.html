@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../돼지테스트/main.css">
-    <script  type="module" src="foodlist1.js" defer></script>
+    <script type="module" src="foodlist1.js" defer></script>
     <!-- <script type="module" src="../kh/timermain.js" defer></script> -->
-    <!-- <script type="module" src="../kh/main.js" defer></script> -->
+    <script type="module" src="../kh/main.js" defer></script>
 </head>
+
 <body>
     <header>
         <section class="header"></section>
         <section class="bottom"></section>
     </header>
 
-        <section class="mainbox">
-            <div class="box title">
-              <h1 class="mini">돼지 테스트</h1>
-              <h3>제한시간은<select class="timeSelect">
-                <option value="3">3초(고수)</option>
-                <option value="7">7초(중수)</option>
-                <option value="10">10초(하수)</option>
-              </select>입니다</h3>
-                <div class="level"><button class="levelselect">코스고르기</button></div>
-                <div class="time"><button class="teamselect">혼자하기</button></div>
-            </div>
+    <section class="mainbox">
+        <div class="box title">
+            <h1 class="mini">돼지 테스트</h1>
+            <h3>제한시간은<select class="timeSelect">
+                    <option value="3">3초(고수)</option>
+                    <option value="7">7초(중수)</option>
+                    <option value="10">10초(하수)</option>
+                </select>입니다</h3>
+            <div class="level"><button class="levelselect">코스고르기</button></div>
+            <div class="time"><button class="teamselect">혼자하기</button></div>
+        </div>
 
-            <div class="box imgbox">
-                <div class="randomimg"></div>
-                <img src="../돼지테스트/기본.png" alt="" id="foodimg">
-            </div>
+        <div class="box imgbox">
+            <div class="randomimg"></div>
+            <img src="../돼지테스트/기본.png" alt="" id="foodimg">
+        </div>
 
-            <div class="box scorebox">
-                <div class="inputbox"><input type="text" id="answer"  placeholder="입력하세요"
-                     autocomplete="off"></div>
-                <div class="outtime"></div>
-                <div class="correct"></div>
-                <div class="score">점수</div>
-                <div class="timer"></div>
-                <div class="gamestart"><button class="start">시작</button></div>
+        <div class="box scorebox">
+            <div class="inputboxCover">
+                <div class="inputbox"><input type="text" id="answer" placeholder="입력하세요" autocomplete="off"></div>
             </div>
-            <ul class="kind clearfix" >
-                <li><button id="total">전체</button></li>
-                <li><button id="korea">한식</button></li>
-                <li><button id="japan">일식</button></li>
-                <li><button id="western">양식</button></li>
-                <li><button id="china">중식</button></li>
-            </ul>
-            
-        </section>
+            <div class="outtime"></div>
+            <div class="correct"></div>
+            <div class="score">점수</div>
+            <div class="timer"></div>
+            <div class="gamestart"><button class="start">시작</button></div>
+        </div>
+        <ul class="kind clearfix">
+            <li><button id="total">전체</button></li>
+            <li><button id="korea">한식</button></li>
+            <li><button id="japan">일식</button></li>
+            <li><button id="western">양식</button></li>
+            <li><button id="china">중식</button></li>
+        </ul>
+
+    </section>
 
 </body>
+
 </html>
