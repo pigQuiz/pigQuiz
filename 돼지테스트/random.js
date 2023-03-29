@@ -471,57 +471,6 @@ const all = [
 // japan : 14
 //  western : 13
 // korea : 23 
-const  $course = [...document.querySelectorAll('.kind > li')];
-
-const selectedCourse = [];
-console.log($course);
-
-$course.forEach(($li, idx) => {
-
-    if($li[idx].value === '한식') $li[idx].onclick = () => {
-        selectedCourse = korea;
-    } 
-    else if($li[idx].value === '일식') {
-        $li[idx].onclick = () => {
-            selectedCourse = Japan;
-        }
-    }
-    else if($li[idx].value === '양식') {
-        $li[idx].onclick = () => {
-            selectedCourse = Western;
-        }
-    }
-    else if($li[idx].value === '전체') {
-        $li[idx].onclick = ()  => {
-            selectedCourse = korea.concat(Japan,China,Western);
-        }
-    }
-    else {
-        $li[idx].onclick = () => {
-            selectedCourse = China;
-        }
-    }
-});
-
-function showimg(selectedCourse)  {
-    selectedCourse
-};
-
-function cosSelect(selectedCourse) {
-    let cosNumber = 0; 
-    if(selectedCourse === korea){
-        cosNumber = selectedCourse;
-    }else if(selectedCourse === China){
-        cosNumber = selectedCourse;
-    }else if ( selectedCourse === Japan){
-        cosNumber = selectedCourse;
-    }else if (selectedCourse === Western){
-        cosNumber = selectedCourse;
-    }else {
-        cosNumber = selectedCourse;
-    }
-}
-cosSelect()
 
 
 function rdimg() {
@@ -532,7 +481,23 @@ function rdimg() {
     objImg.setAttribute('src', korea[foodimg].img); // korea => 코스별로 바뀌게 해야함 
     
 }
-
-// console.log(rdimg())
-
 rdimg();
+
+function ch() {
+    if(
+        document.getElementById("answer").value === korea[foodimg].food
+    ){
+        alert(" ! !  ! ")
+    }
+
+    // let answer = document.getElementById('answer');
+    // answer.addEventListener('keyup', function(e){
+    // });
+
+    // alert(answer.value)
+    // if(korea[foodimg].food === answer.value){
+
+    // }
+}
+
+ch()
