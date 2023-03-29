@@ -35,7 +35,7 @@ function startGameBtn(startGame) {
                 let $newImg = document.createElement('img');
             $newImg.setAttribute('id','foodimg');
             $imgbox.appendChild($newImg);
-            foodList.rdimg(); // 랜덤 음식 사진 보여주는 함수
+            foodList.imgMatch(); // 랜덤 음식 사진 보여주는 함수
                 clearInterval(timeImg); // 0초가 되면 함수 종료
             }
             return timeImgStart;
