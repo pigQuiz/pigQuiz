@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>돼지 테스트</title>
+    <link rel="icon" href="../img/minion-pig01_96760.ico" type="image/x-icon">  <!--파비콘-->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumYeBbeunMinGyeongCe.css" rel="stylesheet"> <!-- 글꼴 -->
     <link rel="stylesheet" href="../돼지테스트/main.css">
-    <!-- <script src="random.js" defer></script> -->
-    <!-- <script type="module" src="test.js"></script> -->
+    <script src="random.js" defer></script>
+
     <script  type="module" src="foodlist1.js" defer></script>
-    <script  type="module" src="../kh/timer.js"></script>
+    <!-- <script  type="module" src="../kh/timer.js"></script> -->
     <script type="module" src="../kh/timermain.js" defer></script>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <section class="header"></section>
         <section class="bottom"></section>
-    </header>
+    </header> -->
 
         <section class="mainbox">
             <div class="box title">
@@ -27,7 +29,7 @@
                 <option value="10">10초(하수)</option>
               </select>입니다</h3>
                 <div class="level"><button class="levelselect">코스고르기</button></div>
-                <div class="time"><button class="teamselect">혼자하기</button></div>
+                <!-- <div class="time"><button class="teamselect">혼자하기</button></div> -->
             </div>
 
             <div class="box imgbox">
@@ -39,9 +41,12 @@
                 <div class="inputbox"><input type="text" id="answer"  placeholder="입력하세요"
                     onkeyup="Enter()" autocomplete="off"></div>
                 <div class="outtime"></div>
+                <div class="result"></div>
                 <div class="correct"></div>
                 <div class="score">점수</div>
+                <div class="resume"></div>
                 <div class="timer"></div>
+                <div class="explain"></div>
                 <div class="gamestart"><button class="start">시작</button></div>
             </div>
             <ul class="kind clearfix" >
@@ -51,7 +56,7 @@
                 <li><button id="western">양식</button></li>
                 <li><button id="china">중식</button></li>
             </ul>
-            
+            <div id="loading"></div>
         </section>
 
 </body>

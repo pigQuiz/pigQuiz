@@ -1,5 +1,8 @@
 @import url(../돼지테스트/reset.css);
 
+* {
+    font-family: 'NanumYeBbeunMinGyeongCe';
+}
 header .header {
     border: 1px solid #000;
     background: orange;
@@ -11,6 +14,11 @@ header .bottom {
     background: red;
     margin: 5px;
     padding: 10px;
+}
+body {
+    background: pink;
+    
+  
 }
 
 /* header 끝 body 시작 */
@@ -31,38 +39,50 @@ body .mainbox {
 
 .mainbox .title {
     margin-bottom: 20px;
-    border: 2px solid black;
+    border: 5px solid black;
     border-radius: 15px;
-    background-color: white;
+    background-color: #fff;
     padding-bottom: 20px;
     text-align: center; 
 }
 
 .mainbox .title h1 {
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 900;
     /* border: 1px solid #000; */
     margin: 20px auto;
     padding: 50px;
+    font-family: 'NanumYeBbeunMinGyeongCe';
 }
 .mainbox .title h3 {
     font-size: 15px;
     font-weight: 600;
+    font-family: 'NanumYeBbeunMinGyeongCe';
 }
 .mainbox .title .level {
     margin: 10px;
 }
+.mainbox .title .timeSelect{
+    border-radius: 15px;
+    border: 2px solid #000;
+}
 .mainbox .title .levelselect {
     padding: 5px;
+    /* color: #fff; */
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 15px;
 }
 .mainbox .imgbox {
+    background: #fff;
     width: 49%;
     height: auto;
     float: left;
-    border: 2px solid #000;
+    border: 5px solid #000;
     /* background: blue; */
     margin-top: 20px;
     box-sizing: border-box;
+
     padding: 10px 5px;
     border-radius: 15px;
     font-size: 300px;
@@ -77,7 +97,7 @@ body .mainbox {
     border-radius: 15px;
 }
 .mainbox .scorebox {
-    /* background: pink; */
+    background: #fff;
     float: right;
     width: 48%;
     height: auto;
@@ -85,7 +105,7 @@ body .mainbox {
     box-sizing: border-box;
     margin-left: 10px;
     margin-top: 20px;
-    border: 2px solid #000;
+    border: 5px solid #000;
     border-radius: 15px;
 }
 .mainbox .scorebox .inputbox {
@@ -98,12 +118,16 @@ body .mainbox {
     height: 25px;
     font-size: 20px;
     text-align: center;
-    
+    background:  #fff;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
+
 .mainbox .scorebox .score {
     font-size: 20px;
     margin-top: 50px;
     margin-bottom: 20px;
+    font-family: 'NanumYeBbeunMinGyeongCe';
 }
 .mainbox .scorebox .timer{
     height: 100px;
@@ -111,6 +135,7 @@ body .mainbox {
     display: none;
 }
 .mainbox .scorebox .start {
+    background:  #fff;
     font-size: 30px;
     border: 2px solid #000;
     border-radius: 20px;

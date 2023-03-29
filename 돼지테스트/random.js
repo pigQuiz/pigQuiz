@@ -484,17 +484,17 @@ function rdimg() {
 rdimg();
 
 // console.log(question)
-
+let order = 0;
 function Enter(){  // answer가 입력하는 답안 // 
     let answer = document.getElementById("answer").value;
     if(window.event.keyCode === 13){
-        // console.log(answer);
-    }else{
-        // return; 
-    }
+    //     if(question === answer){
+    //         order++;
+            console.log(answer);
+        }
+    // }else{
+    //     // return; 
+    // }
 }
 
-function answerFood () {
-    if(anwer ===)
-} 
 
