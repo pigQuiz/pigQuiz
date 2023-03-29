@@ -22,28 +22,29 @@ function startGameBtn(startGame) {
 
     startBtn.onclick = function () { // start버튼 누르면 사라지는 함수
         // let $time = +makeGameData().timeSelect();
-        startBtn.classList.add('hidden');
-        $timer.style.display = 'block';
+        startBtn.classList.add('hidden'); // start버튼 숨기기
+        $timer.style.display = 'block'; // 남은시간 보여주기
 
         let timeImgStart = timeImgSecond;
-        let timeImg = setInterval(function () {
+        let timeImg = setInterval(function () { // 사진박스 3,2,1 카운트 다운
             $imgbox.textContent = timeImgStart;
             $imgbox.setAttribute('value', timeImgStart);
             timeImgStart--;
-            if (timeImgStart === -1) {
+            if (timeImgStart === -1) { // 0초가 되면 랜덤 음식 사진 보여주기
                 $imgbox.textContent ='';
                 let $newImg = document.createElement('img');
             $newImg.setAttribute('id','foodimg');
             $imgbox.appendChild($newImg);
-            foodList.rdimg();
-                clearInterval(timeImg);
+            foodList.rdimg(); // 랜덤 음식 사진 보여주는 함수
+                clearInterval(timeImg); // 0초가 되면 함수 종료
             }
             return timeImgStart;
-        }, 1000);
+        }, 1000); // 사진박스 카운트 다운 함수 end
+
             const $inputAnswer = document.getElementById('answer');
             let $time = startGame.timeSelect();
             
-            setTimeout(() => {
+            setTimeout(() => { // 1초씩 남은시간 깍이는 함수
                 let timeSurv = setInterval(function () { // 난이도에 따라 타이머 설정
                     $timer.setAttribute('value',$time);
                     $time--;
