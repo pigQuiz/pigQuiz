@@ -172,10 +172,11 @@ function rdimg() {
     let foodimg = Math.round(Math.random() * 26);
     // console.log(foodimg); // 랜덤이미지 생성
     let objImg = document.getElementById('foodimg');
-    objImg.setAttribute('src', '');
-    
+    objImg.setAttribute('src', korea[foodimg].img);
 
 }
+
+export {korea, rdimg};
 
 // console.log(rdimg())
 
