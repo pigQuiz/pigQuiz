@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../돼지테스트/main.css">
+    <script type="module" src="test.js"></script>
+    <script  type="module" src="foodlist1.js" defer></script>
+    <script  type="module" src="../kh/timer.js"></script>
+    <script   type="module"src="../kh/timermain.js"></script>
+
     <script type="module" src="../kh/timermain.js" defer></script>
 </head>
 <body>
@@ -22,30 +27,30 @@
                 <option value="7">7초(중수)</option>
                 <option value="10">10초(하수)</option>
               </select>입니다</h3>
-                <div class="level"><button class="lavelselect">코스고르기</button></div>
+                <div class="level"><button class="levelselect">코스고르기</button></div>
                 <div class="time"><button class="teamselect">혼자하기</button></div>
             </div>
 
             <div class="box imgbox">
-                <!-- <div class="randomimg"></div> -->
+                <div class="randomimg"></div>
                 <img src="../돼지테스트/기본.png" alt="" id="foodimg">
             </div>
 
             <div class="box scorebox">
                 <div class="inputbox"><input type="text" id="answer" value="입력하세요"></div>
                 <div class="outtime"></div>
+                <div class="correct"></div>
                 <div class="score">점수</div>
                 <div class="timer"></div>
                 <div class="gamestart"><button class="start">시작</button></div>
             </div>
-            <!-- <ul class="kind">
-
-                <li>전체</li>
-                <li>한식</li>
-                <li>일식</li>
-                <li>양식</li>
-                <li>중식</li>
-            </ul> -->
+            <ul class="kind clearfix" >
+                <li><button id="total">전체</button></li>
+                <li><button id="korea">한식</button></li>
+                <li><button id="japan">일식</button></li>
+                <li><button id="western">양식</button></li>
+                <li><button id="china">중식</button></li>
+            </ul>
             
         </section>
 
