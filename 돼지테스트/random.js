@@ -472,32 +472,29 @@ const all = [
 //  western : 13
 // korea : 23 
 
-
+let question;
 function rdimg() {
 
     let foodimg = Math.round(Math.random() * 26);  // 26 => select 코스별 선택하게 바꿔야함
     // console.log(foodimg); // 랜덤이미지 생성
+    question = korea[foodimg].food;
     let objImg = document.getElementById('foodimg');
-    objImg.setAttribute('src', korea[foodimg].img); // korea => 코스별로 바뀌게 해야함 
-    
+    objImg.setAttribute('src', korea[foodimg].img); // korea => 코스별로 바뀌게 해야함
 }
 rdimg();
 
-function ch() {
-    if(
-        document.getElementById("answer").value === korea[foodimg].food
-    ){
-        alert(" ! !  ! ")
+// console.log(question)
+
+function Enter(){  // answer가 입력하는 답안 // 
+    let answer = document.getElementById("answer").value;
+    if(window.event.keyCode === 13){
+        // console.log(answer);
+    }else{
+        // return; 
     }
-
-    // let answer = document.getElementById('answer');
-    // answer.addEventListener('keyup', function(e){
-    // });
-
-    // alert(answer.value)
-    // if(korea[foodimg].food === answer.value){
-
-    // }
 }
 
-ch()
+function answerFood () {
+    if(anwer ===)
+} 
+
