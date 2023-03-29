@@ -40,6 +40,7 @@ function startGameBtn(startGame) {
             }
             return timeImgStart;
         }, 1000); // 사진박스 카운트 다운 함수 end
+        console.log(timeImg);
 
             const $inputAnswer = document.getElementById('answer');
             let $time = startGame.timeSelect();
@@ -63,3 +64,5 @@ function startGameBtn(startGame) {
 
 const startGame = makeGameData();
 startGameBtn(startGame);
+
+export {startGameBtn, makeGameData};

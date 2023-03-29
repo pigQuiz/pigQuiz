@@ -139,7 +139,7 @@ body .mainbox {
     width: 100%;
     /* background: orange; */
     position: absolute;
-    
+    z-index: -1;
 }
 .kind li{
     visibility:hidden;

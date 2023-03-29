@@ -115,7 +115,7 @@ const korea = [{
 
 ];
 
-
+function levelSelecter(){
 const $level = document.querySelector('.levelselect');
 
 //코스 선택하면 카테고리 보이기
@@ -169,7 +169,7 @@ $catalog.forEach(($btn, idx) => {
         return false;
     }
 });
-
+}
 //    function randomFood(){
 //   const  randomimg  = Math.floor(Math.random() * korea.length) + 1;
 //    document.querySelector('#foodimg').classList.add(korea[randomFood]);
@@ -224,19 +224,34 @@ function imgMatch(selectedCourse) {
 }
 
 function rdimg() {
-    let foodimg = Math.round(Math.random() * selectedCourse.length);
+    let foodimg = Math.round(Math.random() * korea.length);
     // console.log(foodimg); // 랜덤이미지 생성
     let objImg = document.getElementById('foodimg');
-    objImg.setAttribute('src', selectedCourse[foodimg].img);
-    return foodimg;
+    // objImg.setAttribute('src', selectedCourse[foodimg].img);
+    // return foodimg;
 
     objImg.setAttribute('src', korea[foodimg].img);
 
 }
+const $input = document.getElementById('answer');
 
-export {
-    selectedCourse,
-    imgMatch
-};
+$input.addEventListener('keyup',(e)=>{
+    if(e.key === 'Enter'){
+    if($input.value === korea[0].food){
+        return true;
+    }}
+    return false;
+}
+);
 
-// export {korea, rdimg};
+// function Enter(value){  // answer가 입력하는 답안 // 
+//     console.log(value);
+//     let answer = document.getElementById("answer").value;
+//     if(window.event.key === 13){
+//         console.log(answer);
+//     }else{
+//         // return; 
+//     }
+// }
+
+export {korea, rdimg,imgMatch, levelSelecter};

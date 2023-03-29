@@ -494,7 +494,7 @@ function Enter(){  // answer가 입력하는 답안 //
     }
 }
 
-function answerFood () {
-    if(anwer ===)
-} 
+// function answerFood () {
+//     if(anwer ===)
+// } 
 
