@@ -74,7 +74,7 @@ const korea = [
    const $level = document.querySelector('.levelselect');
    
    //코스 선택하면 카테고리 보이기
-   const $catalog = [...document.querySelectorAll('.kind li')];
+   const $catalog = [...document.querySelectorAll('.kind li button')];
 
    $level.onclick = function () {
     console.log('kllll');
@@ -89,39 +89,38 @@ const korea = [
 
    const selectedCourse = [];
   
+   //박스에 onclick이 되었을때 의 경우로 생각하기 
 
    $catalog.forEach(($li, idx) => {
-   
-       if($li[idx].value === '한식') {
-            $li[idx].onclick = () => {
+        $li[idx].onclick = function () {
+            
+            if($li[idx].getAttribute('id') === 'korea') {
                 selectedCourse = korea;
-                imgMatch(selectedCourse);
-            }
-        } 
-        else if($li[idx].value === '일식') {
-            $li[idx].onclick = () => {
+                // imgMatch(selectedCourse);
+                 
+             } 
+             else if($li[idx].getAttribute('id') === 'japan') {
                 selectedCourse = Japan;
-                imgMatch(selectedCourse);
-            }
-        }
-        else if($li[idx].value === '양식') {
-            $li[idx].onclick = () => {
+                // imgMatch(selectedCourse);
+                 
+             }
+             else if($li[idx].getAttribute('id') === 'western') {               
                 selectedCourse = Western;
-                imgMatch(selectedCourse);
-            }
-        }
-        else if($li[idx].value === '전체') {
-            $li[idx].onclick = ()  => {
+                // imgMatch(selectedCourse);
+                 
+             }
+             else if($li[idx].getAttribute('id') === 'total') {
                 selectedCourse = korea.concat(Japan,China,Western);
-                imgMatch(selectedCourse);
-            }
-        }
-        else {
-            $li[idx].onclick = () => {
+                // imgMatch(selectedCourse);
+                 
+             }
+             else {
                 selectedCourse = China;
-                imgMatch(selectedCourse);
-           }
-       }
+                // imgMatch(selectedCourse);
+                
+            }
+            
+        }
    });
 
 //    function randomFood(){
@@ -143,16 +142,25 @@ function randomFood(){
 //점수 계산하기 
 var count =0;
 const $score = document.querySelector('.score');
-//
+
+//정답유무 표시란
 const $correct = document.querySelector('.correct');
+
+//이미지 함수 실행
 while(true){
-    const $imgbox = document.getElementById('foodimg');
-    
+    imgMatch(selectedCourse);
 }
+
+
 //이미지와 input박스 답 체크하기
 function imgMatch(selectedCourse) {
-    const imgNum = randomFood();
-    const selectedFood = selectedCourse[imgNum].img;
+    //사진 랜덤 함수
+    //이미지랜덤 숫자
+    // const imgNum = randomFood();
+    //이미지 보이기 
+    // let objImg = document.getElementById('foodimg');
+    // objImg.setAttribute('src', selectedFood);
+    const selectedFood = selectedCourse[rdimg()].img;
     var arrUrl  = selectedFood.split("/");
     var FileNameplus = arrUrl[arrUrl.length - 1]; //나누어진 배열의 맨 끝이 파일명
     var arSplitFileName   = FileNameplus.split("."); //파일명을 다시 "."로 나누어 확장자랑 쪼갬
@@ -160,7 +168,7 @@ function imgMatch(selectedCourse) {
     if(FileName === document.getElementById('answer').value){
         $correct.textContent = '정답입니다!!';
         count++;
-        $score.style.width = 
+        $score.style.width = '100px';
         $score.innerHTML += `: ${count} 점`;
             
     } else {
@@ -169,10 +177,11 @@ function imgMatch(selectedCourse) {
 }
 
 function rdimg() {
-    let foodimg = Math.round(Math.random() * 26);
+    let foodimg = Math.round(Math.random() * selectedCourse.length);
     // console.log(foodimg); // 랜덤이미지 생성
     let objImg = document.getElementById('foodimg');
-    objImg.setAttribute('src', korea[foodimg].img);
+    objImg.setAttribute('src', selectedCourse[foodimg].img);
+    return foodimg;
 
 }
 
