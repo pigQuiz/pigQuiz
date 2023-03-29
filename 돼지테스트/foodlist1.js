@@ -283,3 +283,154 @@ const Western = [
 ];
 
 
+const $level = document.querySelector('.levelselect');
+//코스 선택하면 카테고리 보이기
+const $catalog = [...document.querySelectorAll('.kind li button')];
+const $catalog_2 = document.querySelector('.kind');
+
+$level.onclick = function () {
+    console.log('kllll');
+    // if($catalog.attributes('style') == 'none' ){
+    // }
+    $catalog.forEach(($li) => {
+        $li.style.visibility = 'visible';
+    });
+
+}
+
+let selectedCourse = [];
+
+//박스에 onclick이 되었을때의 경우로 생각하기 
+
+$catalog.forEach(($btn, idx) => {
+
+    // console.log($btn);
+    $btn.onclick = function () {
+        $catalog.forEach(($li) => {
+            $li.style.cssText = `visibility = hidden; z-index: -1;`;
+            $catalog_2.style.cssText = `z-index : -1;`;
+
+        });
+
+        if ($btn.getAttribute('id') === 'korea') {
+            selectedCourse = korea;
+            console.log(selectedCourse);
+            // imgMatch(selectedCourse);
+
+        } else if ($btn.getAttribute('id') === 'japan') {
+            selectedCourse = Japan;
+            console.log(selectedCourse);
+            // imgMatch(selectedCourse);
+
+        } else if ($btn.getAttribute('id') === 'western') {
+            selectedCourse = Western;
+            console.log(selectedCourse);
+            // imgMatch(selectedCourse);
+
+        } else if ($btn.getAttribute('id') === 'total') {
+            selectedCourse = korea.concat(Japan, China, Western);
+            console.log(selectedCourse);
+            // imgMatch(selectedCourse);
+
+        } else {
+            selectedCourse = China;
+            console.log(selectedCourse);
+            // imgMatch(selectedCourse);
+
+        }
+        return false;
+    }
+});
+
+//    function randomFood(){
+//   const  randomimg  = Math.floor(Math.random() * korea.length) + 1;
+//    document.querySelector('#foodimg').classList.add(korea[randomFood]);
+// } 
+// // console.log(korea.length)
+
+// // console.log(randomFood())
+// randomFood();
+
+
+//이미지 랜덤 함수 생성
+function randomFood() {
+    let foodimg = Math.round(Math.random() * selectedCourse.length);
+    return foodimg;
+}
+
+//점수 계산하기 
+var count = 0;
+const $score = document.querySelector('.score');
+
+//정답유무 표시란
+const $correct = document.querySelector('.correct');
+
+//이미지 함수 실행
+
+let aa = false;
+
+//이미지와 input박스 답 체크하기
+function imgMatch(selectedCourse) {
+    //사진 랜덤 함수
+    //이미지랜덤 숫자
+    // const imgNum = randomFood();
+    //이미지 보이기 
+    // let objImg = document.getElementById('foodimg');
+    // objImg.setAttribute('src', selectedFood);
+    
+    const random = rdimg();
+    const selectedFood = selectedCourse[random].img;
+    var arrUrl = selectedFood.split("/");
+    var FileNameplus = arrUrl[arrUrl.length - 1]; //나누어진 배열의 맨 끝이 파일명
+    var arSplitFileName = FileNameplus.split("."); //파일명을 다시 "."로 나누어 확장자랑 쪼갬
+    const $inputAnswer = document.getElementById('answer');
+    var FileName = arSplitFileName[0]; //파일이름
+    
+    $inputAnswer.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') {
+            if (FileName === document.getElementById('answer').value) {
+                $correct.textContent = '정답입니다!!';
+                count++;
+                $score.style.width = '100px';
+                $score.textContent = ': ' + count + ' 점';
+                $inputAnswer.value='';
+                aa = true;
+            } else {
+                $score.innerHTML='땡!!!!<br>'+'점수: '+count+'점';
+                
+                // $correct.textContent = '땡!!';
+                $score.style.cssText = `z-index = 100; font-weight: 700; font-size: 40px; background:white;`;
+                aa = false;
+            }
+        }
+        rdimg()
+    });
+}
+
+function rdimg() {
+    let foodimg = Math.round(Math.random() * selectedCourse.length);
+    // console.log(foodimg); // 랜덤이미지 생성
+    let objImg = document.getElementById('foodimg');
+    objImg.setAttribute('src', selectedCourse[foodimg].img);
+    return foodimg;
+
+}
+// const $answer = document.getElementById('answer');
+
+// $answer.addEventListener('keyup',(e)=>{
+//     if(e.key === 'Enter'){
+//            if($answer.value === korea[foodimg].food){
+//             alert('aaa');
+//            }
+//     }
+// });
+
+export {
+    selectedCourse,
+    imgMatch,
+    korea,
+    rdimg,
+    aa
+};
+
+// export {korea, rdimg};
