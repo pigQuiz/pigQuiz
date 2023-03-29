@@ -1,5 +1,4 @@
 @import url(../돼지테스트/reset.css);
-@import url(../돼지테스트/foodlist1.js);
 
 header .header {
     border: 1px solid #000;
@@ -121,17 +120,13 @@ body .mainbox {
     width: 100px;
     height: 100px;
     text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
     cursor: pointer;
 }
 /* 시작 버튼 누르면 버튼이 사라짐 */
 .hidden{ 
     position: absolute;
     visibility: hidden;
-=======
-=======
->>>>>>> 8c4dd9b0ff890e0c92b8bf602ffc73ec31e35b8d
+
 }
 
 /*음식종류 카테고리  */
@@ -157,8 +152,5 @@ body .mainbox {
 
 
 
-<<<<<<< HEAD
->>>>>>> 8c4dd9b (yejin commit)
-=======
->>>>>>> 8c4dd9b0ff890e0c92b8bf602ffc73ec31e35b8d
+
 }
