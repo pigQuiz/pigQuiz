@@ -66,9 +66,9 @@ function startGameBtn(startGame) {
                 // $inputAnswer.value = ''; // 입력하세요 없애기
                 $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치
             }, 1000);
+            console.log(foodList.aa);
         }, 3000);
     }
-   
 }
 
 

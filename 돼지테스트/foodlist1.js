@@ -469,7 +469,7 @@ const $correct = document.querySelector('.correct');
 
 //이미지 함수 실행
 
-
+let aa = false;
 
 //이미지와 input박스 답 체크하기
 function imgMatch(selectedCourse) {
@@ -487,6 +487,7 @@ function imgMatch(selectedCourse) {
     var arSplitFileName = FileNameplus.split("."); //파일명을 다시 "."로 나누어 확장자랑 쪼갬
     const $inputAnswer = document.getElementById('answer');
     var FileName = arSplitFileName[0]; //파일이름
+    
     $inputAnswer.addEventListener('keyup', (e) => {
         if (e.key === 'Enter') {
             if (FileName === document.getElementById('answer').value) {
@@ -495,16 +496,17 @@ function imgMatch(selectedCourse) {
                 $score.style.width = '100px';
                 $score.textContent = ': ' + count + ' 점';
                 $inputAnswer.value='';
+                aa = true;
             } else {
                 $score.innerHTML='땡!!!!<br>'+'점수: '+count+'점';
                 
                 // $correct.textContent = '땡!!';
                 $score.style.cssText = `z-index = 100; font-weight: 700; font-size: 40px; background:white;`;
-                
+                aa = false;
             }
         }
+        rdimg()
     });
-    
 }
 
 function rdimg() {
@@ -530,6 +532,7 @@ export {
     imgMatch,
     korea,
     rdimg,
+    aa
 };
 
 // export {korea, rdimg};

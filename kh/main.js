@@ -10,7 +10,7 @@ const $answer = document.getElementById('answer');
 
 // while(count < 0){
     timer.startGameBtn(gameData);
-
+   
     
 //     count++;
 // }
