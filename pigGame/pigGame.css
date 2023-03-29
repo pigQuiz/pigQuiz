@@ -1,0 +1,192 @@
+@import url(../돼지테스트/reset.css);
+
+header .header {
+    border: 1px solid #000;
+    background: orange;
+    margin: 5px;
+    padding: 10px;
+}
+
+header .bottom {
+    background: red;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* header 끝 body 시작 */
+body .mainbox {
+    margin-top: 20px;
+    max-width: 1080px;
+    margin: 20px auto 100px;
+    width: auto;
+    min-height: 1000px;
+    display: block;
+
+    height: 1000px;
+    /* background: olivedrab; */
+}
+.mianbox .box {
+    display: block;
+}
+
+.mainbox .title {
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
+    padding-bottom: 20px;
+    text-align: center; 
+}
+
+.mainbox .title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    /* border: 1px solid #000; */
+    margin: 20px auto;
+    padding: 50px;
+}
+.mainbox .title h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+.mainbox .title .level {
+    margin: 10px;
+}
+.mainbox .title .levelselect {
+    padding: 5px;
+}
+.mainbox .imgbox {
+    width: 49%;
+    height: auto;
+    float: left;
+    border: 2px solid #000;
+    /* background: blue; */
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    border-radius: 15px;
+    font-size: 300px;
+    font-weight: 700;
+}
+.mainbox .imgbox img {
+    object-fit: cover;
+    max-width: 95%;
+    min-height: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+}
+.mainbox .scorebox {
+    /* background: pink; */
+    float: right;
+    width: 48%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-top: 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+}
+.mainbox .scorebox .inputbox {
+    width: auto;
+    height: 30px;
+    margin: 30px auto;
+}
+.mainbox .scorebox .inputbox #answer {
+    width: auto;
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.mainbox .scorebox .score {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.mainbox .scorebox .timer{
+    height: 100px;
+    margin-top: 50px;
+    display: none;
+}
+.mainbox .scorebox .start {
+    font-size: 30px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 1%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+
+
+    cursor: pointer;
+}
+/* 시작 버튼 누르면 버튼이 사라짐 */
+.hidden{ 
+    position: absolute;
+    visibility: hidden;
+}
+/* start 버튼 hover */
+.mainbox .scorebox .start:hover{
+    background-color: antiquewhite;
+}
+
+/*음식종류 카테고리  */
+
+.kind {
+    /* border: 1px solid #000; */
+    height: 400px;
+    width: 100%;
+    /* background: orange; */
+    position: absolute;
+    
+}
+.kind li{
+    visibility:hidden;
+    float: left;
+    color: #000;
+    padding: 20px;
+    margin: 30px;
+    position: relative;
+}
+.kind li button {
+    font-size: 50px;
+    border: 3px solid #000;
+    background: pink;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 30px;
+    position: relative;
+}
+/* 음식 종류 카테고리 추가 */
+
+
+#screen-level {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#screen-level ul{
+    display: flex;
+    flex-direction: column;
+}
+#screen-level li {
+    margin: auto 10px;
+    height: 50px;
+    border-radius: 10px;
+}
+section {
+    padding-top: 5vh;
+}
+
+/* loading  */
+ #loading {
+    background-color: white;
+}
+#loading img{
+    width: 1px;
+    height: 1px;
+}
