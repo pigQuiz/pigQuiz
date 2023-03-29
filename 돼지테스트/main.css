@@ -27,6 +27,7 @@ body .mainbox {
 }
 .mianbox .box {
     display: block;
+
 }
 
 .mainbox .title {
@@ -87,6 +88,8 @@ body .mainbox {
     margin-top: 20px;
     border: 2px solid #000;
     border-radius: 15px;
+    position: relative;
+    
 }
 .mainbox .scorebox .inputbox {
     width: auto;
@@ -162,9 +165,14 @@ body .mainbox {
 }
 
 /* 오답 땡!!! 부분  */
+
 .correct {
-    background: orange;
-    width: 100px;
-    height: 100px;
+    /* background: orange; */
+    margin: auto;
+    position: absolute;
+    bottom: 100px;
+    width: 450px;
+    height: 400px;
+    z-index: -1;
 }
 

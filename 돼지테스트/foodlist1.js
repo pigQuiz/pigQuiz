@@ -367,10 +367,16 @@ const $correct = document.querySelector('.correct');
 
 //이미지 함수 실행
 
+//input 엔터 쳤을 때
+function Enter() {
+    if (window.event.keyCode === 13) {
+      if (document.getElementById("answer").value.length > 0) {
+        imgMatch(selectedCourse);
+      }
+    }
+  }
 
-
-
-
+let c = true;
 //이미지와 input박스 답 체크하기
 function imgMatch(selectedCourse) {
     //사진 랜덤 함수
@@ -389,14 +395,17 @@ function imgMatch(selectedCourse) {
         count++;
         $score.style.width = '100px';
         $score.innerHTML += `: ${count} 점`;
-        return true;
+        c = true;
     } else {
-
         $correct.textContent = '땡!!';
+        $correct.style.cssText = `z-index = 100; font-weight: 700; font-size: 40px; background:white;`;
         
-        return false;
+        c = false;
     }
+    return c;
 }
+
+
 
 function rdimg() {
     let foodimg = Math.round(Math.random() * selectedCourse.length);
@@ -412,4 +421,3 @@ export {
     imgMatch
 };
 
-// export {korea, rdimg};

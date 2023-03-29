@@ -14,6 +14,7 @@ function makeGameData() {
     };
 }
 
+
 function startGameBtn(startGame) {
     const startBtn = document.querySelector('.start');
     const $timer = document.querySelector('.timer');
@@ -33,9 +34,9 @@ function startGameBtn(startGame) {
             if (timeImgStart === -1) { // 0초가 되면 랜덤 음식 사진 보여주기
                 $imgbox.textContent ='';
                 let $newImg = document.createElement('img');
-            $newImg.setAttribute('id','foodimg');
-            $imgbox.appendChild($newImg);
-            foodList.imgMatch(); // 랜덤 음식 사진 보여주는 함수
+                $newImg.setAttribute('id','foodimg');
+                $imgbox.appendChild($newImg);
+                foodList.imgMatch(foodList.selectedCourse); // 랜덤 음식 사진 보여주는 함수
                 clearInterval(timeImg); // 0초가 되면 함수 종료
             }
             return timeImgStart;
