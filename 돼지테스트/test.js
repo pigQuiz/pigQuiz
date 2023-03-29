@@ -1,5 +1,5 @@
 
-import * as Korean from '../돼지테스트/foodlist1';
+// import * as Korean from '../돼지테스트/foodlist1';
 
 let China;
 let Japan;

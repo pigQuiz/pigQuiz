@@ -239,4 +239,4 @@ export {
     imgMatch
 };
 
-export {korea, rdimg};
+// export {korea, rdimg};
