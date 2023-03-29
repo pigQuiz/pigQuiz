@@ -146,7 +146,7 @@ $catalog.forEach(($btn, idx) => {
 
         if ($btn.getAttribute('id') === 'korea') {
             selectedCourse = korea;
-            console.log(selectedCourse);
+            // console.log(selectedCourse);
             // imgMatch(selectedCourse);
 
         } else if ($btn.getAttribute('id') === 'japan') {
@@ -194,9 +194,9 @@ const $score = document.querySelector('.score');
 const $correct = document.querySelector('.correct');
 
 //이미지 함수 실행
-while (true) {
-    imgMatch(selectedCourse);
-}
+
+
+
 
 
 //이미지와 input박스 답 체크하기
@@ -233,8 +233,8 @@ function rdimg() {
 }
 
 export {
-    korea,
-    rdimg
+    selectedCourse,
+    imgMatch
 };
 
 // console.log(rdimg())
