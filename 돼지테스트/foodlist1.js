@@ -284,9 +284,9 @@ const Western = [
 
 
 const $level = document.querySelector('.levelselect');
-
 //코스 선택하면 카테고리 보이기
 const $catalog = [...document.querySelectorAll('.kind li button')];
+const $catalog_2 = document.querySelector('.kind');
 
 $level.onclick = function () {
     console.log('kllll');
@@ -294,9 +294,8 @@ $level.onclick = function () {
     // }
     $catalog.forEach(($li) => {
         $li.style.visibility = 'visible';
-
     });
-    // $catalog.style.visibility = 'visible';
+    
 }
 
 let selectedCourse = [];
@@ -308,7 +307,9 @@ $catalog.forEach(($btn, idx) => {
     // console.log($btn);
     $btn.onclick = function () {
         $catalog.forEach(($li) => {
-            $li.style.visibility = 'hidden';
+            $li.style.cssText=`visibility = hidden; z-index: -1;`;
+            $catalog_2.style.cssText = `z-index : -1;`;
+
         });
 
         if ($btn.getAttribute('id') === 'korea') {
@@ -388,9 +389,12 @@ function imgMatch(selectedCourse) {
         count++;
         $score.style.width = '100px';
         $score.innerHTML += `: ${count} 점`;
-
+        return true;
     } else {
+
         $correct.textContent = '땡!!';
+        
+        return false;
     }
 }
 
