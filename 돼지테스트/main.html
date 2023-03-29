@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../돼지테스트/main.css">
+    <script src="random.js" defer></script>
     <script type="module" src="test.js"></script>
     <script  type="module" src="foodlist1.js" defer></script>
     <script  type="module" src="../kh/timer.js"></script>
@@ -37,7 +38,8 @@
             </div>
 
             <div class="box scorebox">
-                <div class="inputbox"><input type="text" id="answer" value="입력하세요"></div>
+                <div class="inputbox"><input type="text" id="answer"  placeholder="입력하세요"
+                    onkeyup="Enter()" autocomplete="off"></div>
                 <div class="outtime"></div>
                 <div class="correct"></div>
                 <div class="score">점수</div>
