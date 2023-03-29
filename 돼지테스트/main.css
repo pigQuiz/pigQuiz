@@ -27,7 +27,6 @@ body .mainbox {
 }
 .mianbox .box {
     display: block;
-
 }
 
 .mainbox .title {
@@ -88,8 +87,7 @@ body .mainbox {
     margin-top: 20px;
     border: 2px solid #000;
     border-radius: 15px;
-    position: relative;
-    
+    /* position: relative; */
 }
 .mainbox .scorebox .inputbox {
     width: auto;
@@ -175,4 +173,3 @@ body .mainbox {
     height: 400px;
     z-index: -1;
 }
-

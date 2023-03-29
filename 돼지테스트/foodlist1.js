@@ -385,8 +385,8 @@ function imgMatch(selectedCourse) {
     var arSplitFileName = FileNameplus.split("."); //파일명을 다시 "."로 나누어 확장자랑 쪼갬
     const $inputAnswer = document.getElementById('answer');
     var FileName = arSplitFileName[0]; //파일이름
-    
     $inputAnswer.addEventListener('keyup', (e) => {
+        let aa = true;
         if (e.key === 'Enter') {
             if (FileName === document.getElementById('answer').value) {
                 $correct.textContent = '정답입니다!!';
@@ -403,8 +403,11 @@ function imgMatch(selectedCourse) {
                 aa = false;
             }
         }
-        rdimg()
+        
+        // rdimg()
     });
+    console.log(aa);
+    return aa;
 }
 
 function rdimg() {

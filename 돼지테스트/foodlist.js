@@ -1,125 +1,290 @@
+const korea = [{
+    food: '삼겹살',
+    img: './photo/삼겹살.jpg'
+},
+
+{
+    food: '순대국',
+    img: './photo/순대국.jpg'
+},
+
+{
+    food: '치킨',
+    img: './photo/치킨.jpg'
+},
+
+{
+    food: '뼈해장국',
+    img: './photo/뼈해장국.jpg'
+},
+
+{
+    food: '제육볶음',
+    img: './photo/제육볶음.jpg'
+},
+
+{
+    food: '잡채',
+    img: './photo/잡채.jpg'
+},
+
+{
+    food: '쌈밥',
+    img: './photo/쌈밥.jpg'
+},
+
+{
+    food: '냉면',
+    img: './photo/냉면.jpg'
+},
+
+{
+    food: '계란말이',
+    img: './photo/계란말이.jpg'
+},
+
+{
+    food: '곱창',
+    img: './photo/곱창.jpg'
+},
+
+{
+    food: '갈비찜',
+    img: './photo/갈비찜.jpg'
+},
+
+{
+    food: '보쌈',
+    img: './photo/보쌈.jpg'
+},
+
+{
+    food: '족발',
+    img: './photo/족발.jpg'
+},
+
+{
+    food: '닭갈비',
+    img: './photo/닭갈비.jpg'
+},
+
+{
+    food: '닭강정',
+    img: './photo/닭강정.jpg'
+},
+
+{
+    food: '백숙',
+    img: './photo/백숙.jpg'
+},
+
+{
+    food: '물회',
+    img: './photo/물회.jpg'
+},
+
+{
+    food: '재첩국',
+    img: './photo/재첩국.jpg'
+},
+
+{
+    food: '콩나물국',
+    img: './photo/콩나물국.jpg'
+},
+
+{
+    food: '갈비탕',
+    img: './photo/갈비탕.jpg'
+},
+
+{
+    food: '김치찌개',
+    img: './photo/김치찌개.jpg'
+},
+
+{
+    food: '고추장찌개',
+    img: './photo/고추장찌개.jpg'
+},
+
+{
+    food: '부대찌개',
+    img: './photo/부대찌개.jpg'
+},
+
+];
+
+const China = [
+
+{food : '마라샹궈',
+img : './photo/마라샹궈.jpg'},
+
+{food : '우육면',
+img : './photo/우육면.jpg'},
+
+{food : '깐쇼새우',
+img : './photo/깐쇼새우.jpg'},
+
+{food : '꽃빵',
+img : './photo/꽃빵.jpg'},
+
+{food : '난자완스',
+img : './photo/난자완스.jpg'},
+
+{food : '동파육',
+img : './photo/동파육.jpg'},
+
+{food : '딤섬',
+img : './photo/딤섬.jpg'},
+
+{food : '라조기',
+img : './photo/라조기.jpg'},
+
+{food : '마라탕',
+img : './photo/마라탕.jpg'},
+
+{food : '유린기',
+img : './photo/유린기.jpg'},
+
+{food : '오향장육',
+img : './photo/오향장육.jpg'},
+
+{food : '훠궈',
+img : './photo/훠궈.jpg'},
+
+{food : '취두부',
+img : './photo/취두부.jpg'},
+
+{food : '팔보채',
+img : './photo/팔보채.jpg'},
+
+{food : '유타오',
+img : './photo/유타오.jpg'},
+
+{food : '어향육사',
+img : './photo/어향육사.jpg'},
+
+{food : '월병',
+img : './photo/월병.jpg'},
+
+{food : '젠빙',
+img : './photo/젠빙.jpg'},
+
+{food : '주량원자',
+img : './photo/주량원자.jpg'},
+
+{food : '중쯔',
+img : './photo/중쯔.jpg'},
+
+{food : '샥스핀',
+img : './photo/샥스핀.jpg'},
+
+{food : '마파두부',
+img : './photo/마파두부.jpg'},
+
+{food : '불도장',
+img : './photo/불도장.jpg'},
+
+{food : '방탕후루',
+img : './photo/방탕후루.jpg'},
+
+];
 
 
-const korea = {
- 삼겹살 : ['삼겹살'],
- 순대국 : ['순대국'],
- 뼈해장국 : ['뼈해장국'],
- 치킨 : ['치킨'],
- 제육볶음 : ['제육볶음'],
- 잡채 : ['잡채'],
- 쌈밥 : ['쌈밥'],
- 냉면 : ['냉면'],
- 계란말이 : ['계란말이'],
- 곱창 : ['곱창'],
- 갈비찜 : ['갈비찜'],
- 보쌈 : ['보쌈'],
- 족발 : ['족발'],
- 닭갈비 : ['닭갈비'],
- 닭강정 : ['닭강정'],
- 백숙 : ['백숙'],
- 물회 : ['물회'],
- 재첩국 : ['재첩국'],
- 콩나물국 : ['콩나물국'],
- 갈비탕 : ['갈비탕'],
- 김치찌개 : ['김치찌개'],
- 고추장찌개 : ['고추장찌개'],
- 부대찌개 : ['부대찌개'],
-};
+const Japan = [
 
-const China = {
-    마라샹궈 : ['마라샹궈'],
-    우육면 : ['우육면'],
-    깐쇼새우 :['깐쇼새우'],
-    꽃빵 : ['꽃빵'],
-    난자완스 : ['난자완스'],
-    동파육 : ['동파육'],
-    딤섬 : ['딤섬'],
-    라조기 : ['라조기'],
-    마라탕 : ['마라탕'],
-    유린기 : ['유린기'],
-    오향장육 : ['오향장육'],
-    훠궈 : ['훠궈'],
-    취두부 : ['취두부'],
-    팔보채 : ['팔보채'],
-    유타오 : ['유타오'],
-    어향육사 : ['어향육사'],
-    월병 : ['월병'],
-    젠빙 : ['젠빙'],
-    주량원자 : ['주량원자'],
-    중쯔 : ['중쯔'],
-    샥스핀 : ['샥스핀'], 
-    북경오리 : ['북경오리'], 
-    마파두부 : ['마파두부'],
-    불도장 : ['불도장'],
-    방탕후루 : ['방탕후루'],
-};
+{food : '라멘',
+img : './photo/라멘.jpg'},
 
-const Japan = {
-    라멘 : ['라멘'],
-    가라아게 : ['가라아게'],
-    고로케 : ['고로케'],
-    낫토 : ['낫토'],
-    돈부리 : ['돈부리'],
-    소바 : ['소바'],
-    스키야키 : ['스키야키'],
-    스시 : ['스시'],
-    야키토리 : ['야키토리'],
-    우메보시 : ['우메보시'],
-    타코야끼: ['타코야끼'],
-    우동 : ['우동'],
-    야키니쿠 : ['야키니쿠'],
-    규동 : ['규동'],
+{food : '가라아게',
+img : './photo/가라아게.jpg'},
+
+{food : '고로케',
+img : './photo/고로케.jpg'},
+
+{food : '낫토',
+img : './photo/낫토.jpg'},
+
+{food : '돈부리',
+img : './photo/돈부리.jpg'},
+
+{food : '스키야키',
+img : './photo/스키야키.jpg'},
+
+{food : '소바',
+img : './photo/소바.jpg'},
+
+{food : '스시',
+img : './photo/스시.jpg'},
+
+{food : '야키토리',
+img : './photo/야키토리.jpg'},
+
+{food : '타코야끼',
+img : './photo/타코야끼.jpg'},
+
+{food : '우메보시',
+img : './photo/우메보시.jpg'},
+
+
+{food : '우동',
+img : './photo/우동.jpg'},
+
+
+{food : '야키니쿠',
+img : './photo/야키니쿠.jpg'},
+
+
+{food : '규동',
+img : './photo/규동.jpg'},
+];
+const Western = [
+
+{food : '파스타',
+img : './photo/파스타.jpg'},
+
+{food : '피쉬앤칩스',
+img : './photo/피쉬앤칩스.jpg'},
+
+{food : '햄버거',
+img : './photo/햄버거.jpg'},
+
+{food : '피자',
+img : './photo/피자.jpg'},
+
+{food : '리조또',
+img : './photo/리조또.jpg'},
+
+{food : '미트볼',
+img : './photo/미트볼.jpg'},
+
+{food : '아란치니',
+img : './photo/아란치니.jpg'},
+
+{food : '에그인헬',
+img : './photo/에그인헬.jpg'},
+
+{food : '폴렌타',
+img : './photo/폴렌타.jpg'},
+
+{food : '뇨끼',
+img : './photo/뇨끼.jpg'},
+
+{food : '맥앤치즈',
+img : './photo/맥앤치즈.jpg'},
+
+{food : '핫도그',
+img : './photo/핫도그.jpg'},
+
+{food : '라쟈냐',
+img : './photo/라쟈냐.jpg'},
+
+];
+
+export{
+    korea,
+    Japan,
+    Western,
+    China
 }
-const Western = {
-    파스타 : ['파스타'],
-    피쉬앤칩스 : ['피쉬앤칩스'],
-    햄버거 : ['햄버거'],
-    피자 : ['피자'],
-    리조또: ['리조또'],
-    미트볼 : ['미트볼'],
-    아란치니 : ['아란치니'],
-    에그인헬 : ['에그인헬'],
-    폴렌타 :['폴렌타'],
-    뇨끼 :['뇨끼'],
-    맥앤치즈 :['맥앤치즈'],
-    핫도그:['핫도그'],
-    라쟈냐 :['라쟈냐'],
-   
-}
-
-
-const  $course = [...document.querySelectorAll('.kind > li')];
-
-const selectedCourse = [];
-console.log($course);
-
-$course.forEach(($li, idx) => {
-
-    if($li[idx].value === '한식') $li[idx].onclick = () => {
-        selectedCourse = korea;
-    } 
-    else if($li[idx].value === '일식') {
-        $li[idx].onclick = () => {
-            selectedCourse = Japan;
-        }
-    }
-    else if($li[idx].value === '양식') {
-        $li[idx].onclick = () => {
-            selectedCourse = Western;
-        }
-    }
-    else if($li[idx].value === '전체') {
-        $li[idx].onclick = ()  => {
-            selectedCourse = korea.concat(Japan,China,Western);
-        }
-    }
-    else {
-        $li[idx].onclick = () => {
-            selectedCourse = China;
-        }
-    }
-});
-
-function showimg(selectedCourse)  {
-    selectedCourse
-};
