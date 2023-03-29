@@ -139,6 +139,7 @@ function randomFood(){
     let foodimg = Math.round(Math.random() * selectedCourse.length);
     return foodimg;   
 }
+
 //점수 계산하기 
 var count =0;
 const $score = document.querySelector('.score');
