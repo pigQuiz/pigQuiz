@@ -146,11 +146,15 @@ body .mainbox {
     visibility:hidden;
     float: left;
     color: #000;
+    padding: 20px;
+    margin: 30px;
+    position: relative;
+}
+.kind li button {
     font-size: 50px;
     border: 3px solid #000;
     background: pink;
     border-radius: 30px;
-    padding: 20px;
-    margin: 30px;
-    position: relative;
+
+    
 }

@@ -74,8 +74,6 @@ const korea = [
    const $level = document.querySelector('.levelselect');
    
    //코스 선택하면 카테고리 보이기
-
-   
    const $catalog = [...document.querySelectorAll('.kind li')];
 
    $level.onclick = function () {
@@ -84,13 +82,14 @@ const korea = [
     // }
     $catalog.forEach(($li) => {
         $li.style.visibility = 'visible';
+
     });
     // $catalog.style.visibility = 'visible';
    }
 
    const selectedCourse = [];
   
-   
+
    $catalog.forEach(($li, idx) => {
    
        if($li[idx].value === '한식') {
@@ -145,10 +144,14 @@ var count =0;
 const $score = document.querySelector('.score');
 //
 const $correct = document.querySelector('.correct');
+while(true){
+    const $imgbox = document.getElementById('foodimg');
+    
+}
 //이미지와 input박스 답 체크하기
 function imgMatch(selectedCourse) {
     const imgNum = randomFood();
-    const selectedFood = selectedCourse[imgNum].img
+    const selectedFood = selectedCourse[imgNum].img;
     var arrUrl  = selectedFood.split("/");
     var FileNameplus = arrUrl[arrUrl.length - 1]; //나누어진 배열의 맨 끝이 파일명
     var arSplitFileName   = FileNameplus.split("."); //파일명을 다시 "."로 나누어 확장자랑 쪼갬
