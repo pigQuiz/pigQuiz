@@ -403,6 +403,15 @@ const $correct = document.querySelector('.correct');//정답유무 표시란
 const $inputAnswer = document.getElementById('answer');
 let score = makeGameData().score;
 
+const startBtn = document.querySelector('.start');
+    const $timer = document.querySelector('.timer');
+    const $imgbox = document.querySelector('.imgbox');
+    let timeImgSecond = 3;
+
+const $resume = document.getElementById('resume');
+const $restart = document.getElementById('restart');
+
+
 function makeGameData() {
     const $timeSelect = document.querySelector('.timeSelect');
 
@@ -470,10 +479,7 @@ $catalog.forEach(($btn) => {
 });
 startGameBtn();
 function startGameBtn() {
-    const startBtn = document.querySelector('.start');
-    const $timer = document.querySelector('.timer');
-    const $imgbox = document.querySelector('.imgbox');
-    let timeImgSecond = 3;
+    
 
     startBtn.onclick = function () { // start버튼 누르면 사라지는 함수
         // let $time = +makeGameData().timeSelect();
@@ -559,6 +565,10 @@ function corrected(){
                 $score.style.width = '100px';
                 $score.textContent = ': ' + score + ' 점';
                 $inputAnswer.value='';
+                $resume.style.zIndex = 2;
+                startBtn.style.visibility = 'hidden';
+                startBtn.style.zIndex = -2;
+            
 }
 function failed(){
     $score.innerHTML='땡!!!!<br>'+'점수: '+score+'점';
