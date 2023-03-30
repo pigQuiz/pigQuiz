@@ -409,6 +409,8 @@ const $imgbox = document.querySelector('.imgbox');
 
 var timeSurv;
 
+const $crownPig = document.querySelector('.animated-entity-symbol');
+
 function makeGameData() {
 const $timeSelect = document.querySelector('.timeSelect');
 
@@ -496,16 +498,16 @@ startBtn.onclick = function () { // start버튼 누르면 사라지는 함수
     return timeImgStart;
   }, 1000); // 사진박스 카운트 다운 함수 end
 
-  setTimeout(()=>{
+  setTimeout(() => {
     let $newImg = document.createElement('img');
-      $newImg.setAttribute('id', 'foodimg');
-      $imgbox.appendChild($newImg);
-      imgMatch(selectedCourse); // 랜덤 음식 사진 보여주는 함수
-    },4000);
-    setTimeout(()=>{
+    $newImg.setAttribute('id', 'foodimg');
+    $imgbox.appendChild($newImg);
+    imgMatch(selectedCourse); // 랜덤 음식 사진 보여주는 함수
+  }, 4000);
+  setTimeout(() => {
     timeAttack();
-  },3000);
-  
+  }, 3000);
+
 }
 }
 //10번 제한 하는 변수
@@ -527,7 +529,7 @@ var arSplitFileName = FileNameplus.split("."); //파일명을 다시 "."로 나�
 const $inputAnswer = document.getElementById('answer');
 var FileName = arSplitFileName[0]; //파일이름
 
-$inputAnswer.addEventListener('keyup', (e) => {
+$inputAnswer.onkeyup=(e)=>{
   if (e.key === 'Enter') {
     if (FileName === document.getElementById('answer').value) {
       corrected();
@@ -538,7 +540,7 @@ $inputAnswer.addEventListener('keyup', (e) => {
     }
   }
 
-});
+};
 }
 
 function rdimg() {
@@ -557,37 +559,43 @@ score++;
 $score.style.width = '100px';
 $score.textContent = ': ' + score + ' 점';
 $inputAnswer.value = '';
+console.log('맞음');
 //10회 미만으로 맞췄을때 실행
-if(score <= 10){
+if (score < 3) {
   imgMatch(selectedCourse);
   // startGameBtn();
+  $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
   clearInterval(timeSurv);
   timeAttack();
-} else{
-    alert(`당신은 엄청난 돼지입니다!!!!!!으아갸갸갹!!!!`)
+} else {
+  $crownPig.setAttribute('style','z-index: 3; visibility: visible');
+  // alert(`당신은 엄청난 돼지입니다!!!!!!으아갸갸갹!!!!`);
 }
 }
 
 function failed() {
+ console.log('땡');;
 $score.innerHTML = '땡!!!!<br>' + '점수: ' + score + '점';
-
+$timer.textContent = '';
+clearInterval(timeSurv);
 // $correct.textContent = '땡!!';
 $score.style.cssText = `z-index = 100; font-weight: 700; font-size: 40px; background:white;`;
 }
 
-function timeAttack(){
+function timeAttack() {
 const $time = makeGameData().timeSelect();
 let tim = $time;
 // 1초씩 남은시간 깍이는 함수
-  timeSurv = setInterval(function () { // 난이도에 따라 타이머 설정
-    $timer.setAttribute('value', tim);
-    tim--;
-    $timer.textContent = `남은시간 : ${tim}`;
-    // console.log(timeSurv);
-    if (tim === 0) {
-      clearInterval(timeSurv);
-    }
-    // $inputAnswer.value = ''; // 입력하세요 없애기
-    $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치
-  }, 1000);
+timeSurv = setInterval(function () { // 난이도에 따라 타이머 설정
+  $timer.setAttribute('value', tim);
+  tim--;
+  $timer.textContent = `남은시간 : ${tim}`;
+  // console.log(timeSurv);
+  if (tim === 1) {
+    $timer.textContent = '';
+    clearInterval(timeSurv);
+  }
+  // $inputAnswer.value = ''; // 입력하세요 없애기
+  $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치
+}, 1000);
 }
