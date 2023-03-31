@@ -10,6 +10,7 @@
     top: 30%;
     z-index: -3;
     visibility: hidden;
+    
   }
    
   
@@ -18,6 +19,33 @@
            transform: scale(1.2);
           }
         }
+.pigs{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pigs .piglife{
+    position: absolute;
+    width: 70px;
+
+}
+.pigs .piglife img{
+    width: 50px;
+}
+.pigs .piglife:nth-child(1){
+    top: 5%;
+    right: 10%;
+}
+.pigs .piglife:nth-child(2){
+    top: 5%;
+    right: 13%;
+}
+.pigs .piglife:nth-child(3){
+    top: 5%;
+    right: 16%;
+}
         
 * {
     font-family: 'NanumYeBbeunMinGyeongCe';
@@ -71,8 +99,50 @@ body .mainbox {
     /* border: 1px solid #000; */
     margin: 20px auto;
     padding: 50px;
+    
     font-family: 'NanumYeBbeunMinGyeongCe';
 }
+/* .mainbox .title h1 span {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    animation: bounce .5s ease infinite alternate;
+    font-family: 'Titan One', cursive;
+    font-size: 80px;
+    color: #FFF;
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 transparent,
+                 0 7px 0 transparent,
+                 0 8px 0 transparent,
+                 0 9px 0 transparent,
+                 0 10px 10px rgba(0, 0, 0, .4);
+  }
+  
+  h1 span:nth-child(2) { animation-delay: 2s; }
+  h1 span:nth-child(3) { animation-delay: 10s; }
+  h1 span:nth-child(4) { animation-delay: .3s; }
+  h1 span:nth-child(5) { animation-delay: .5s; }
+  
+  
+  @keyframes bounce {
+    100% {
+      top: -20px;
+      text-shadow: 0 1px 0 #CCC,
+                   0 2px 0 #CCC,
+                   0 3px 0 #CCC,
+                   0 4px 0 #CCC,
+                   0 5px 0 #CCC,
+                   0 6px 0 #CCC,
+                   0 7px 0 #CCC,
+                   0 8px 0 #CCC,
+                   0 9px 0 #CCC,
+                   0 50px 25px rgba(0, 0, 0, .2);
+    }
+  } */
 .mainbox .title h3 {
     font-size: 15px;
     font-weight: 600;
