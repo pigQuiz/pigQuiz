@@ -410,6 +410,8 @@ const $pig = document.querySelector('.eatingPig'); //포크를든 돼지
 
 var timeSurv;
 
+const $crownPig = document.querySelector('.animated-entity-symbol');
+
 function makeGameData() {
   const $timeSelect = document.querySelector('.timeSelect');
 
@@ -437,6 +439,7 @@ $level.onclick = function () {
 }
 
 $catalog.forEach(($btn) => {
+
   // console.log($btn);
   $btn.onclick = function () {
     $catalog.forEach(($li) => {
@@ -448,31 +451,32 @@ $catalog.forEach(($btn) => {
     if ($btn.getAttribute('id') === 'korea') {
       selectedCourse = korea;
       console.log(selectedCourse);
-
+      // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'japan') {
       selectedCourse = Japan;
       console.log(selectedCourse);
-   
+      // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'western') {
       selectedCourse = Western;
       console.log(selectedCourse);
-
+      // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'total') {
       selectedCourse = korea.concat(Japan, China, Western);
       console.log(selectedCourse);
-    
+      // imgMatch(selectedCourse);
+
     } else {
       selectedCourse = China;
       console.log(selectedCourse);
+      // imgMatch(selectedCourse);
 
     }
     return false;
   }
 });
-
 startGameBtn();
 
 function startGameBtn() {
@@ -526,10 +530,9 @@ function imgMatch(selectedCourse) {
   const $inputAnswer = document.getElementById('answer');
   var FileName = arSplitFileName[0]; //파일이름
 
-  $inputAnswer.onkeyup= (e) => {
+  $inputAnswer.onkeyup = (e) => {
     if (e.key === 'Enter') {
       if (FileName === document.getElementById('answer').value) {
-        console.log(`${score}   10회미만1`);
         $pig.animate([
           translate(20),
           translate(0,5),
@@ -540,7 +543,6 @@ function imgMatch(selectedCourse) {
         corrected();
         // timeAttack();
       } else {
-        console.log(`${score} 답이 틀릴때의 경우`);
         failed();
         // timeAttack();
       }
@@ -565,55 +567,27 @@ function corrected() {
   $score.style.width = '100px';
   $score.textContent = ': ' + score + ' 점';
   $inputAnswer.value = '';
+  console.log('맞음');
   //10회 미만으로 맞췄을때 실행
-  if (score < 5) {
-    console.log(`${score}   10회미만`);
+  if (score < 3) {
     imgMatch(selectedCourse);
     // startGameBtn();
+    $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
     clearInterval(timeSurv);
     timeAttack();
-  } 
-  else if (score >= 5) {
-    
-    console.log('????>/./...??');
-    var retry = confirm(`10개 맞추기 성공!! 다시하시겠습니까?`);
-    $score.textContent = '';
-    if (retry === true) {
-      $catalog.forEach(($li) => {
-        $li.style.visibility = 'visible';
-        $li.style.cssText = `visibility = visible; z-index: 100;`;
-        
-      });
-      score = 0;
-      $inputAnswer.value = '';
-      imgMatch(selectedCourse);
-      startGameBtn();
-    } else {
-      alert(`수고하셨습니다!!`);
-    }
+  } else {
+    $crownPig.setAttribute('style', 'z-index: 3; visibility: visible');
+    // alert(`당신은 엄청난 돼지입니다!!!!!!으아갸갸갹!!!!`);
   }
 }
 
-
-
-
 function failed() {
+  console.log('땡');;
   $score.innerHTML = '땡!!!!<br>' + '점수: ' + score + '점';
+  $timer.textContent = '';
+  clearInterval(timeSurv);
+  // $correct.textContent = '땡!!';
   $score.style.cssText = `z-index = 100; font-weight: 700; font-size: 40px; background:white;`;
-  console.log(`${score}????>/./...??fail`);
-  if (confirm(`다시하시겠습니까?`)) {
-    score = 0;
-    imgMatch(selectedCourse);
-    startGameBtn();
-  } else {
-
-    alert(`멍충멍충!!`);
-    var link = "../돼지테스트/chooseone.html";
-    location.href = link;
-    location.replace(link);
-    window.open(link);
-  }
-  $correct.textContent = '땡!!';
 }
 
 function timeAttack() {
@@ -625,7 +599,8 @@ function timeAttack() {
     tim--;
     $timer.textContent = `남은시간 : ${tim}`;
     // console.log(timeSurv);
-    if (tim === 0) {
+    if (tim === 1) {
+      $timer.textContent = '';
       clearInterval(timeSurv);
     }
     // $inputAnswer.value = ''; // 입력하세요 없애기
