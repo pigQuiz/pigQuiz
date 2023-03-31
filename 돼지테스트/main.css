@@ -251,3 +251,12 @@ body .mainbox {
     height: 400px;
     z-index: -1;
 }
+
+/* 먹는 돼지  */
+aside {
+    float: left;
+    width: 100px;
+}
+aside img {
+    width: 400px;
+}

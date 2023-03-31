@@ -406,6 +406,7 @@ let score = makeGameData().score;
 const startBtn = document.querySelector('.start');
 const $timer = document.querySelector('.timer');
 const $imgbox = document.querySelector('.imgbox');
+const $pig = document.querySelector('.eatingPig'); //포크를든 돼지
 
 var timeSurv;
 
@@ -532,6 +533,13 @@ var FileName = arSplitFileName[0]; //파일이름
 $inputAnswer.onkeyup=(e)=>{
   if (e.key === 'Enter') {
     if (FileName === document.getElementById('answer').value) {
+      // $pig.animate([
+      //   translate(20),
+      //   translate(0,5),
+      //   translate(0,-5),
+      //   translate(0,5),
+
+      // ])
       corrected();
       // timeAttack();
     } else {
