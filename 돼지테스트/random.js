@@ -68,6 +68,56 @@ const korea = [
      {food : '부대찌개',
      img : './photo/부대찌개.jpg'},
 
+
+     { food: "불고기", img: "./photo/불고기.jpg" },
+
+     { food: "산채비빔밥", img: "./photo/산채비빔밥.jpg" },
+
+     { food: "갈비살 구이", img: "./photo/갈비살 구이.jpg" },
+
+     { food: "된장찌개", img: "./photo/된장찌개.jpg" },
+
+     { food: "잡탕", img: "./photo/잡탕.jpg" },
+
+     { food: "갈비전골", img: "./photo/갈비전골.jpg" },
+
+     { food: "된장국", img: "./photo/된장국.jpg" },
+
+     { food: "미역국", img: "./photo/미역국.jpg" },
+
+     { food: "삼계탕", img: "./photo/삼계탕.jpg" },
+
+     { food: "떡갈비", img: "./photo/떡갈비.jpg" },
+
+     { food: "해물파전", img: "./photo/해물파전.jpg" },
+
+     { food: "알탕", img: "./photo/알탕.jpg" },
+
+     { food: "쭈꾸미 볶음", img: "./photo/쭈꾸미 볶음.jpg" },
+
+     { food: "삼색만두", img: "./photo/삼색만두.jpg" },
+
+     { food: "냉모밀", img: "./photo/냉모밀.jpg" },
+
+     { food: "미소된장국", img: "./photo/미소된장국.jpg" },
+
+     { food: "돌솥비빔밥", img: "./photo/돌솥비빔밥.jpg" },
+
+     { food: "김치볶음밥", img: "./photo/김치볶음밥.jpg" },
+
+     { food: "콩비지찌개", img: "./photo/콩비지찌개.jpg" },
+
+     { food: "불낙전골", img: "./photo/불낙전골.jpg" },
+
+     { food: "청국장찌개", img: "./photo/청국장찌개.jpg" },
+
+     { food: "삼치조림", img: "./photo/삼치조림.jpg" },
+
+     { food: "고등어조림", img: "./photo/고등어조림.jpg" },
+
+     { food: "장어구이", img: "./photo/장어구이.jpg" },
+
+
    ];
 
 
