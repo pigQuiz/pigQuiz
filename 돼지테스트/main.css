@@ -179,7 +179,14 @@ body .mainbox {
 
     cursor: pointer;
 }
-
+/* 먹는 돼지  */
+aside {
+    float: left;
+    width: 100px;
+}
+aside img {
+    width: 400px;
+}
 
 
 /* 시작 버튼 누르면 버튼이 사라짐 */
