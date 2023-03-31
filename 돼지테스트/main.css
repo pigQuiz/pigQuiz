@@ -1,5 +1,24 @@
 @import url(../돼지테스트/reset.css);
 
+
+.animated-entity-symbol {
+    color: red;
+    font-size: 20vw;
+    animation: pulse 1.2s infinite alternate;
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    z-index: -3;
+    visibility: hidden;
+  }
+   
+  
+  @keyframes pulse {
+      to {
+           transform: scale(1.2);
+          }
+        }
+        
 * {
     font-family: 'NanumYeBbeunMinGyeongCe';
 }
@@ -17,7 +36,7 @@ header .bottom {
 }
 body {
     background: pink;
-    
+    /* position: relative; */
   
 }
 
@@ -65,6 +84,8 @@ body .mainbox {
 .mainbox .title .timeSelect{
     border-radius: 15px;
     border: 2px solid #000;
+    font-size: 20px;
+    padding-bottom: 10px;
 }
 .mainbox .title .levelselect {
     padding: 5px;
@@ -179,14 +200,7 @@ body .mainbox {
 
     cursor: pointer;
 }
-/* 먹는 돼지  */
-aside {
-    float: left;
-    width: 100px;
-}
-aside img {
-    width: 400px;
-}
+
 
 
 /* 시작 버튼 누르면 버튼이 사라짐 */
@@ -201,11 +215,11 @@ aside img {
 .kind {
     /* border: 1px solid #000; */
     height: 400px;
-    width: 100%;
+    /* width: 100%; */
     /* background: orange; */
     position: absolute;
     /* z-index: -1; */
-    
+    /* left: -100px; */
 }
 .kind li{
     visibility:hidden;
@@ -236,4 +250,13 @@ aside img {
     width: 450px;
     height: 400px;
     z-index: -1;
+}
+
+/* 먹는 돼지  */
+aside {
+    float: left;
+    width: 100px;
+}
+aside img {
+    width: 400px;
 }
