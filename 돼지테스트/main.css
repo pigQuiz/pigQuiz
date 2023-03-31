@@ -258,5 +258,18 @@ aside {
     width: 100px;
 }
 aside img {
-    width: 400px;
+    width: 300px;
 }
+/* 이빨자국효과 */
+.tooth {
+    position: relative;
+}
+.tooth img{
+    position: absolute;
+    visibility: hidden;
+    right: 530px;
+    bottom: px;
+    width: 800px;
+ 
+}
+
