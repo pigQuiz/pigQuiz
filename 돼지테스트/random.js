@@ -146,6 +146,51 @@ const korea = [
     {food : '방탕후루',
     img : './photo/방탕후루.jpg'},
     
+    {
+        food: "짜장면",
+        img : './photo/짜장면.jpg'
+    },
+    {
+        food: "양장피",
+        img : './photo/양장피.jpg'
+    },
+    {
+        food: "샤오롱바오",
+        img : './photo/샤오롱바오.jpg'
+    },
+
+    {
+        food: "삼선육면",
+        img : './photo/삼선육면.jpg'
+    },
+    {
+        food: "크림새우",
+        img : './photo/크림새우.jpg'
+    },
+    {
+        food: "탕수육",
+        img : './photo/탕수육.jpg'
+    },
+
+    {
+        food: "산쑤새우",
+        img : './photo/산쑤새우.jpg'
+    },
+    {
+        food: "산촌식닭찜",
+        img : './photo/산촌식닭찜.jpg'
+    },
+    {
+        food: "산미구이",
+        img : './photo/산미구이.jpg'
+    },
+    {
+        "food": "짜조면",
+        img : './photo/짜조면.jpg'
+    },
+  
+
+
 ];
 
 
@@ -183,18 +228,40 @@ const Japan = [
 
     {food : '우메보시',
     img : './photo/우메보시.jpg'},
-
  
     {food : '우동',
     img : './photo/우동.jpg'},
 
- 
     {food : '야키니쿠',
     img : './photo/야키니쿠.jpg'},
 
  
     {food : '규동',
     img : './photo/규동.jpg'},
+
+    {
+        food: "오코노미야키",
+        img : './photo/오코노미야키.jpg'
+    },
+
+    {
+        food: "텐동",
+        img : './photo/텐동.jpg'
+    },
+    {
+        food: "야끼소바",
+        img : './photo/야끼소바.jpg'
+    },
+
+    {
+        food: "장어덮밥",
+        img : './photo/장어덮밥.jpg'
+    },
+
+
+
+
+
 ];
 const Western = [
 
@@ -236,6 +303,87 @@ const Western = [
 
     {food : '라쟈냐',
     img : './photo/라쟈냐.jpg'},
+    
+    { food: "스테이크", 
+    img : './photo/스테이크.jpg'
+},
+   
+    { food: "바베큐립", 
+    img : './photo/바베큐립.jpg'
+},
+    { food: "치킨샐러드",
+    img : './photo/치킨샐러드.jpg'
+},
+
+    { food: "랍스터비스크",
+    img : './photo/랍스터비스크.jpg'
+},
+    { food: "양고기스튜" ,
+    img : './photo/양고기스튜.jpg'
+},
+  
+    { food: "샌드위치",
+    img : './photo/샌드위치.jpg'
+},
+ 
+    { food: "팝콘감자", //테이터 토츠 
+    img : './photo/팝콘감자.jpg'
+},
+
+    { food: "비프부르기뇽",
+    img : './photo/비프부르기뇽.jpg'
+},
+    { food: "베이컨",
+    img : './photo/베이컨.jpg'
+},
+    { food: "바게트",
+    img : './photo/바게트.jpg'
+},
+    { food: "치킨너겟",
+    img : './photo/치킨너겟.jpg'
+},
+    { food: "쉬림프스캠피", 
+    img : './photo/쉬림프스캠피.jpg'
+},
+
+    { food: "멕시칸샐러드",
+    img : './photo/멕시칸샐러드.jpg'
+},
+    { food: "쉬림프샐러드",
+    img : './photo/쉬림프샐러드.jpg'
+},
+    { food: "카레", 
+    img : './photo/카레.jpg'
+},
+    { food: "참치샐러드" ,
+    img : './photo/참치샐러드.jpg'
+},
+    { food: "스파게티", 
+    img : './photo/스파게티.jpg'
+},
+
+    { food: "까르보나라" ,
+    img : './photo/까르보나라.jpg'
+},
+ 
+    { food: "소시지" ,
+    img : './photo/소시지.jpg'
+},
+
+    { food: "크로와상" ,
+    img : './photo/크로와상.jpg'
+},
+  
+    { food: "치킨브로콜리" ,
+    img : './photo/치킨브로콜리.jpg'
+},
+    { food: "치즈케이크", 
+    img : './photo/치즈케이크.jpg'
+},
+
+    { food: "카프레제",
+    img : './photo/카프레제.jpg'
+}
 
 ];
 
@@ -463,42 +611,3 @@ const all = [
     img : './photo/라쟈냐.jpg'},
 
 ];
-
-// console.log(korea.length) 
-// 메뉴별 length
-// all : 74
-// china : 24
-// japan : 14
-//  western : 13
-// korea : 23 
-
-// let question;
-// function rdimg() {
-
-//     let foodimg = Math.round(Math.random() * 26);  // 26 => select 코스별 선택하게 바꿔야함
-//     // console.log(foodimg); // 랜덤이미지 생성
-//     question = korea[foodimg].food;
-//     let objImg = document.getElementById('foodimg');
-//     objImg.setAttribute('src', korea[foodimg].img); // korea => 코스별로 바뀌게 해야함
-// }
-// rdimg();
-
-<<<<<<< HEAD
-// console.log(question)
-let order = 0;
-function Enter(){  // answer가 입력하는 답안 // 
-    let answer = document.getElementById("answer").value;
-    if(window.event.keyCode === 13){
-    //     if(question === answer){
-    //         order++;
-            console.log(answer);
-        }
-    // }else{
-    //     // return; 
-    // }
-}
-
-function answerFood () {
-    if(anwer ===)
-} 
-
