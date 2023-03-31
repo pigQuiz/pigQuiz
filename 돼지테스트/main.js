@@ -411,8 +411,10 @@ var timeSurv;
 
 let countLife = 3;
 
-const $crownPig = document.querySelector('.animated-entity-symbol');
 
+const $pigLife = document.querySelectorAll('.piglife');
+const $crownPig = document.querySelector('.animated-entity-symbol');
+console.log($pigLife);
 function makeGameData() {
   const $timeSelect = document.querySelector('.timeSelect');
 
@@ -546,9 +548,20 @@ function imgMatch(selectedCourse) {
     if (e.key === 'Enter') {
       if (FileName === document.getElementById('answer').value) {
         corrected();
+
       } else {
+        $inputAnswer.value = '';
+        // $pigLife[countLife].classList.add('hidden');
         countLife--;
-        failed();
+    $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
+    clearInterval(timeSurv);
+    timeAttack();
+    imgMatch(selectedCourse);
+        if (countLife === 0) {
+          $inputAnswer.disabled = true;
+          failed();
+        }
+
       }
     }
 
@@ -560,6 +573,7 @@ function rdimg() {
   // console.log(foodimg); // 랜덤이미지 생성
   let objImg = document.getElementById('foodimg');
   objImg.setAttribute('src', selectedCourse[foodimg].img);
+
   return foodimg;
 
 }
@@ -588,10 +602,11 @@ function corrected() {
 }
 
 function failed() {
-  console.log('땡');;
+  console.log('땡');
+  // $pigLife[countLife].classList.add('hidden');
+  $inputAnswer.value = '';
   $score.innerHTML = '땡!!!!<br>' + '점수: ' + score + '점';
   $timer.textContent = '';
-  $inputAnswer.readOnly = true;
   clearInterval(timeSurv);
   // $correct.textContent = '땡!!';
   $score.style.cssText = `z-index = 100; font-weight: 700; font-size: 40px; background:white;`;
@@ -607,13 +622,13 @@ function timeAttack() {
     $timer.textContent = `남은시간 : ${tim}`;
     // console.log(timeSurv);
     if (tim === 0) {
+      $inputAnswer.disabled = true;
       $timer.textContent = '';
-      countLife--;
-        failed();
+      // countLife--;
+      failed();
     }
     // $inputAnswer.value = ''; // 입력하세요 없애기
     $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치
 
-    console.log(countLife);
   }, 1000);
 }

@@ -35,15 +35,15 @@
     width: 50px;
 }
 .pigs .piglife:nth-child(1){
-    top: 5%;
+    top: 20%;
     right: 10%;
 }
 .pigs .piglife:nth-child(2){
-    top: 5%;
+    top: 20%;
     right: 13%;
 }
 .pigs .piglife:nth-child(3){
-    top: 5%;
+    top: 20%;
     right: 16%;
 }
         
