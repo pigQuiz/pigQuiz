@@ -445,7 +445,7 @@ $level.onclick = function () { // 코스 선택
 }
 
 $catalog.forEach(($btn) => { // 선택해야할 코스들
-
+  
   $btn.onclick = function () {
     $catalog.forEach(($li) => {
       $li.style.cssText = `visibility = hidden; z-index: -1;`;
@@ -456,26 +456,31 @@ $catalog.forEach(($btn) => { // 선택해야할 코스들
     if ($btn.getAttribute('id') === 'korea') {
       selectedCourse = korea;
       console.log(selectedCourse);
+      $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'japan') {
       selectedCourse = Japan;
       console.log(selectedCourse);
+      $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'western') {
       selectedCourse = Western;
       console.log(selectedCourse);
+      $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'total') {
       selectedCourse = korea.concat(Japan, China, Western);
       console.log(selectedCourse);
+      $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else {
       selectedCourse = China;
       console.log(selectedCourse);
+      $level.disabled = true;
       // imgMatch(selectedCourse);
 
     }
@@ -633,6 +638,7 @@ function corrected() { // 정답일때 나오는 함수
       clearInterval(timeSurv);
       timeAttack();
     } else {
+      objImg.setAttribute('src', '../돼지테스트/기본.png');
       $crownPig.setAttribute('style',  'z-index: 3; visibility: visible');
     $timer.textContent = `남은시간 :`;
     clearInterval(timeSurv);
