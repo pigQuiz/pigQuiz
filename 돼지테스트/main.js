@@ -406,6 +406,13 @@ let score = makeGameData().score;
 const startBtn = document.querySelector('.start');
 const $timer = document.querySelector('.timer');
 const $imgbox = document.querySelector('.imgbox');
+const $realimg = document.querySelector('.imgbox .randomimg');
+const $pig = document.querySelector('.eatingPig'); //포크를든 돼지
+
+//fade 효과 적용하기 
+let $fade = document.querySelector('.fadeffect');
+
+
 
 var timeSurv;
 let countLife = 3;
@@ -417,17 +424,17 @@ const $pigs = document.querySelector('.pigs');
 
 
 function makeGameData() {
-  const $timeSelect = document.querySelector('.timeSelect');
+    const $timeSelect = document.querySelector('.timeSelect');
 
-  return {
-    timeSelect: $timeSelect.onchange = () => {
-      const $timeSelect = document.querySelector('.timeSelect').value;
-      return $timeSelect;
-    }, //선택된 제한시간
-    timeImgSecond: 3,
-    timeSecond: null,
-    score: 0,
-  };
+    return {
+      timeSelect: $timeSelect.onchange = () => {
+        const $timeSelect = document.querySelector('.timeSelect').value;
+        return $timeSelect;
+      }, //선택된 제한시간
+      timeImgSecond: 3,
+      timeSecond: null,
+      score: 0,
+    };
 }
 
 
@@ -570,27 +577,68 @@ function rdimg() { // 랜덤 숫자 리턴 함수
   return foodimg;
 }
 
+// const $tooth = document.querySelector('.tooth img');
 
 function corrected() { // 정답일때 나오는 함수
+    //정답일때 돼지가 앙
+  $imgbox.animate([
+    // {transform : 'scale(0.2)'},
+    {
+      transform: 'rotateX(360deg)'
+    },
+    {
+      transform: 'translate(-400px, -300px)'
+    },
+    {
+      transform: 'transition : 1s'
+    },
+    {
+      width: '30px',
+      height: '30px'
+    },
+    {
+      border: 'none',
+      padding: '0'
+    }
+  ], 1000);
+  
+  $pig.animate([
+    {
+      transform: 'rotateX(30deg)'
+    },
+    {
+      transform: 'rotateY(30deg)'
+    },
+    {
+      transform: 'rotateX(30deg)'
+    },
+    {
+      transform: 'rotateY(30deg)'
+    },
+  ], 1000);
+
+
   $correct.textContent = '정답입니다!!';
-  score++;
-  // $score.style.width = '100px';
-  $score.textContent = '  ' + score + ' 점';
-  $inputAnswer.value = '';
-  console.log('맞음');
+    score++;
+  //   $score.style.width = '100px';
+    $score.textContent = '  ' + score + ' 점';
+    $inputAnswer.value = '';
+    console.log('맞음');
+  
   //10회 미만으로 맞췄을때 실행
-  if (score < 3) {
+    if (score < 3) {
+  
     imgMatch(selectedCourse);
-    $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
-    clearInterval(timeSurv);
-    timeAttack();
-  } else {
-    $crownPig.setAttribute('style', 'z-index: 3; visibility: visible');
+        $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
+      clearInterval(timeSurv);
+      timeAttack();
+    } else {
+      $crownPig.setAttribute('style',  'z-index: 3; visibility: visible');
     $timer.textContent = `남은시간 :`;
     clearInterval(timeSurv);
     $inputAnswer.readOnly = true;
-    // alert(`당신은 엄청난 돼지입니다!!!!!!으아갸갸갹!!!!`);
-  }
+      // alert(`당신은 엄청난 돼지입니다!!!!!!으아갸갸갹!!!!`);
+    }
 }
 
 function failed() { // 틀렸을때 나오는 함수
