@@ -586,42 +586,7 @@ function rdimg() { // 랜덤 숫자 리턴 함수
 
 function corrected() { // 정답일때 나오는 함수
     //정답일때 돼지가 앙
-  $imgbox.animate([
-    // {transform : 'scale(0.2)'},
-    {
-      transform: 'rotateX(360deg)'
-    },
-    {
-      transform: 'translate(-400px, -300px)'
-    },
-    {
-      transform: 'transition : 1s'
-    },
-    {
-      width: '30px',
-      height: '30px'
-    },
-    {
-      border: 'none',
-      padding: '0'
-    }
-  ], 1000);
   
-  $pig.animate([
-    {
-      transform: 'rotateX(30deg)'
-    },
-    {
-      transform: 'rotateY(30deg)'
-    },
-    {
-      transform: 'rotateX(30deg)'
-    },
-    {
-      transform: 'rotateY(30deg)'
-    },
-  ], 1000);
-
 
   $correct.textContent = '정답입니다!!';
     score++;
@@ -632,12 +597,48 @@ function corrected() { // 정답일때 나오는 함수
   
   //10회 미만으로 맞췄을때 실행
     if (score < 3) {
-  
+      $imgbox.animate([
+        // {transform : 'scale(0.2)'},
+        {
+          transform: 'rotateX(360deg)'
+        },
+        {
+          transform: 'translate(-400px, -300px)'
+        },
+        {
+          transform: 'transition : 1s'
+        },
+        {
+          width: '30px',
+          height: '30px'
+        },
+        {
+          border: 'none',
+          padding: '0'
+        }
+      ], 1000);
+      
+      $pig.animate([
+        {
+          transform: 'rotateX(30deg)'
+        },
+        {
+          transform: 'rotateY(30deg)'
+        },
+        {
+          transform: 'rotateX(30deg)'
+        },
+        {
+          transform: 'rotateY(30deg)'
+        },
+      ], 1000);
+    
     imgMatch(selectedCourse);
         $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
       clearInterval(timeSurv);
       timeAttack();
     } else {
+      let objImg = document.getElementById('foodimg');
       objImg.setAttribute('src', '../돼지테스트/기본.png');
       $crownPig.setAttribute('style',  'z-index: 3; visibility: visible');
     $timer.textContent = `남은시간 :`;
