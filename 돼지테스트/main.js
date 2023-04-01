@@ -499,6 +499,8 @@ function startGameBtn() {
     $level.disabled = true;
     const $timeSelectt = document.querySelector('.timeSelect')
     $timeSelectt.disabled = true;
+    //시작버튼 누르면 돼지 내리기
+    $pig.style.
 
     window.scrollTo({ // 시작버튼 누르면 스크롤 자동으로 내려주기
       top: document.body.scrollHeight, // <- 페이지 총 Height
