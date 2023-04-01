@@ -408,16 +408,16 @@ const $timer = document.querySelector('.timer');
 const $imgbox = document.querySelector('.imgbox');
 
 var timeSurv;
-
 let countLife = 3;
-
 
 const $pigLife = document.querySelectorAll('.piglife');
 const $crownPig = document.querySelector('.animated-entity-symbol');
-console.log($pigLife);
+const $boomPig = document.querySelector('.animated-entity-symbol2');
+const $pigs = document.querySelector('.pigs');
+
+
 function makeGameData() {
   const $timeSelect = document.querySelector('.timeSelect');
-
 
   return {
     timeSelect: $timeSelect.onchange = () => {
@@ -427,24 +427,18 @@ function makeGameData() {
     timeImgSecond: 3,
     timeSecond: null,
     score: 0,
-
   };
 }
 
 
-$level.onclick = function () {
-  console.log('kllll');
-  // if($catalog.attributes('style') == 'none' ){
-  // }
-  $catalog.forEach(($li) => {
+$level.onclick = function () { // 코스 선택
+  $catalog.forEach(($li) => { // 코스들 보이기
     $li.style.visibility = 'visible';
   });
-
 }
 
-$catalog.forEach(($btn) => {
+$catalog.forEach(($btn) => { // 선택해야할 코스들
 
-  // console.log($btn);
   $btn.onclick = function () {
     $catalog.forEach(($li) => {
       $li.style.cssText = `visibility = hidden; z-index: -1;`;
@@ -481,24 +475,24 @@ $catalog.forEach(($btn) => {
     return false;
   }
 });
-
 startGameBtn();
 
 function startGameBtn() {
   let timeImgSecond = 3;
 
   startBtn.onclick = function () { // start버튼 누르면 사라지는 함수
-    // let $time = +makeGameData().timeSelect();
     startBtn.classList.add('hidden'); // start버튼 숨기기
+    $pigs.classList.add('show');
     $timer.style.display = 'block'; // 남은시간 보여주기
     $level.disabled = true;
     const $timeSelectt = document.querySelector('.timeSelect')
     $timeSelectt.disabled = true;
 
-    window.scrollTo({
+    window.scrollTo({ // 시작버튼 누르면 스크롤 자동으로 내려주기
       top: document.body.scrollHeight, // <- 페이지 총 Height
       behavior: "smooth"
     });
+
 
 
     let timeImgStart = timeImgSecond;
@@ -513,19 +507,18 @@ function startGameBtn() {
       return timeImgStart;
     }, 1000); // 사진박스 카운트 다운 함수 end
 
-    setTimeout(() => {
+    setTimeout(() => { // 처음에 4초뒤 랜덤한 이미지 보여주기
       let $newImg = document.createElement('img');
       $newImg.setAttribute('id', 'foodimg');
       $imgbox.appendChild($newImg);
       imgMatch(selectedCourse); // 랜덤 음식 사진 보여주는 함수
     }, 4000);
-    setTimeout(() => {
+    setTimeout(() => { // 3초후 남은시간 카운트다운
       timeAttack();
     }, 3000);
 
   }
 }
-//10번 제한 하는 변수
 
 
 function imgMatch(selectedCourse) {
@@ -551,39 +544,38 @@ function imgMatch(selectedCourse) {
 
       } else {
         $inputAnswer.value = '';
-        // $pigLife[countLife].classList.add('hidden');
-        countLife--;
-    $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
-    clearInterval(timeSurv);
-    timeAttack();
-    imgMatch(selectedCourse);
+        --countLife;
+        // console.log($pigLife[countLife]);
+        $pigLife[countLife].remove();
+        $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
+        clearInterval(timeSurv);
+        timeAttack();
+        imgMatch(selectedCourse);
+        console.log(countLife);
         if (countLife === 0) {
           $inputAnswer.disabled = true;
           failed();
         }
-
       }
     }
-
   };
 }
 
-function rdimg() {
+function rdimg() { // 랜덤 숫자 리턴 함수
   let foodimg = Math.round(Math.random() * selectedCourse.length);
   // console.log(foodimg); // 랜덤이미지 생성
   let objImg = document.getElementById('foodimg');
   objImg.setAttribute('src', selectedCourse[foodimg].img);
 
   return foodimg;
-
 }
 
 
-function corrected() {
+function corrected() { // 정답일때 나오는 함수
   $correct.textContent = '정답입니다!!';
   score++;
-  $score.style.width = '100px';
-  $score.textContent = ': ' + score + ' 점';
+  // $score.style.width = '100px';
+  $score.textContent = '  ' + score + ' 점';
   $inputAnswer.value = '';
   console.log('맞음');
   //10회 미만으로 맞췄을때 실행
@@ -601,8 +593,14 @@ function corrected() {
   }
 }
 
-function failed() {
+function failed() { // 틀렸을때 나오는 함수
+  let $newImg = document.createElement('img');
+      $newImg.setAttribute('id', 'foodimg');
+      $imgbox.appendChild($newImg);
+      let objImg = document.getElementById('foodimg');
+  objImg.setAttribute('src', '../돼지테스트/기본.png');
   console.log('땡');
+  $boomPig.setAttribute('style', 'z-index: 3; visibility: visible');
   // $pigLife[countLife].classList.add('hidden');
   $inputAnswer.value = '';
   $score.innerHTML = '땡!!!!<br>' + '점수: ' + score + '점';
@@ -612,7 +610,7 @@ function failed() {
   $score.style.cssText = `z-index = 100; font-weight: 700; font-size: 40px; background:white;`;
 }
 
-function timeAttack() {
+function timeAttack() { // 남은시간 카운트 다운해주는 함수
   const $time = makeGameData().timeSelect();
   let tim = $time;
   // 1초씩 남은시간 깍이는 함수
@@ -622,10 +620,27 @@ function timeAttack() {
     $timer.textContent = `남은시간 : ${tim}`;
     // console.log(timeSurv);
     if (tim === 0) {
-      $inputAnswer.disabled = true;
-      $timer.textContent = '';
-      // countLife--;
-      failed();
+      // $inputAnswer.disabled = true;
+      // $timer.textContent = '';
+      // --countLife;
+      // imgMatch(selectedCourse);
+      // console.log(countLife);
+      // if (countLife === 0) {
+      //   failed();
+      // }
+      $inputAnswer.value = '';
+        --countLife;
+        // console.log($pigLife[countLife]);
+        $pigLife[countLife].remove();
+        $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
+        clearInterval(timeSurv);
+        timeAttack();
+        imgMatch(selectedCourse);
+        console.log(countLife);
+        if (countLife === 0) {
+          $inputAnswer.disabled = true;
+          failed();
+        }
     }
     // $inputAnswer.value = ''; // 입력하세요 없애기
     $inputAnswer.focus(); // 시작 버튼 누르면 input 커서 위치

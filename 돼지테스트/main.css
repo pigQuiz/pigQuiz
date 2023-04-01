@@ -12,6 +12,17 @@
     visibility: hidden;
     
   }
+  .animated-entity-symbol2 {
+    color: red;
+    font-size: 20vw;
+    animation: pulse 1.2s infinite alternate;
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    z-index: -3;
+    visibility: hidden;
+    
+  }
    
   
   @keyframes pulse {
@@ -23,16 +34,16 @@
     width: 300px;
     display: flex;
     justify-content: space-between;
-
+    visibility: hidden;
 }
 
 .pigs .piglife{
     position: absolute;
     width: 70px;
-
 }
 .pigs .piglife img{
     width: 50px;
+    
 }
 .pigs .piglife:nth-child(1){
     top: 20%;
@@ -215,10 +226,11 @@ body .mainbox {
 }
 
 .mainbox .scorebox .score {
-    font-size: 20px;
+    font-size: 50px;
     margin-top: 50px;
     margin-bottom: 20px;
     font-family: 'NanumYeBbeunMinGyeongCe';
+    text-align: center;
 }
 .mainbox .scorebox .timer{
     height: 100px;
@@ -280,6 +292,10 @@ body .mainbox {
 
 }
 
+.hidepig{
+    visibility: hidden;
+}
+
 /*음식종류 카테고리  */
 
 .kind {
@@ -320,4 +336,8 @@ body .mainbox {
     width: 450px;
     height: 400px;
     z-index: -1;
+}
+
+.show {
+    visibility: visible;
 }
