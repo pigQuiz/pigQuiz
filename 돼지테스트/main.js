@@ -533,10 +533,16 @@ $inputAnswer.addEventListener('keyup', (e) => {
       corrected();
       // timeAttack();
     } else {
+      // boom();
       failed();
       // timeAttack();
     }
   }
+
+// function boom() {
+//   let grpig = document.getElementById("graypig");
+//   grpig.style.zIndex=2;
+// }
 
 });
 }
