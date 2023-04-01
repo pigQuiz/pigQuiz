@@ -409,6 +409,11 @@ const $imgbox = document.querySelector('.imgbox');
 const $realimg = document.querySelector('.imgbox .randomimg');
 const $pig = document.querySelector('.eatingPig'); //포크를든 돼지
 
+//fade 효과 적용하기 
+let $fade = document.querySelector('.fadeffect');
+
+
+
 var timeSurv;
 
 const $crownPig = document.querySelector('.animated-entity-symbol');
@@ -555,16 +560,17 @@ function rdimg() {
 
 }
 
-const $tooth = document.querySelector('.tooth img');
+// const $tooth = document.querySelector('.tooth img');
 
 function corrected() {
+  //정답일때 돼지가 앙
   $imgbox.animate([
     // {transform : 'scale(0.2)'},
     {
       transform: 'rotateX(360deg)'
     },
     {
-      transform: 'translate(-400px, -200px)'
+      transform: 'translate(-400px, -300px)'
     },
     {
       transform: 'transition : 1s'
@@ -579,7 +585,6 @@ function corrected() {
     }
   ], 1000);
   
-
   $pig.animate([
     {
       transform: 'rotateX(30deg)'
@@ -595,12 +600,14 @@ function corrected() {
     },
   ], 1000);
 
+
   $correct.textContent = '정답입니다!!';
   score++;
   $score.style.width = '100px';
   $score.textContent = ': ' + score + ' 점';
   $inputAnswer.value = '';
   console.log('맞음');
+
   //10회 미만으로 맞췄을때 실행
   if (score < 3) {
 

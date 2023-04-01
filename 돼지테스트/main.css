@@ -211,7 +211,6 @@ body .mainbox {
 }
 
 /*음식종류 카테고리  */
-
 .kind {
     /* border: 1px solid #000; */
     height: 400px;
@@ -241,7 +240,6 @@ body .mainbox {
 }
 
 /* 오답 땡!!! 부분  */
-
 .correct {
     /* background: orange; */
     margin: auto;
@@ -276,19 +274,37 @@ aside img {
 /* 시작 페이지 fade in out 구현 */
 .fadeffect {
     position: absolute;
-    z-index: 100;
+    z-index: -100;
     width: 100%;
     height: 100%;
     background: white;
     font-size: 100px;
-    animation: fadeout 3s;
+    animation: fadeout 4s;
+    visibility: hidden;
+    
+}
+.fadeffect p {
+    margin-top: 300px;
+    font-family: 'TTTtangsbudaejjigaeB', serif;
+}
+@font-face {
+    font-family: 'TTTtangsbudaejjigaeB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
 }
 @keyframes fadeout {
     from {
+        visibility: visible;
+        z-index: 22;
         opacity: 1;
     }
     to {
         opacity: 0;
+        visibility: hidden;
+        z-index: -100;
     } 
 }
+/* fadeout 효과 end */
+
 
