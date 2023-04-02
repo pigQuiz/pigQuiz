@@ -320,7 +320,15 @@ function rdimg() { // 랜덤 숫자 리턴 함수
 // const $tooth = document.querySelector('.tooth img');
 
 function corrected() { // 정답일때 나오는 함수
+
+  $correct.textContent = '정답입니다!!';
+    score++;
+  //   $score.style.width = '100px';
+    $score.textContent = '  ' + score + ' 점';
+    $inputAnswer.value = '';
+    console.log('맞음');
     //정답일때 돼지가 앙
+    if (score < 3) {
   $imgbox.animate([
     // {transform : 'scale(0.2)'},
     {
@@ -358,15 +366,10 @@ function corrected() { // 정답일때 나오는 함수
   ], 1000);
 
 
-  $correct.textContent = '정답입니다!!';
-    score++;
-  //   $score.style.width = '100px';
-    $score.textContent = '  ' + score + ' 점';
-    $inputAnswer.value = '';
-    console.log('맞음');
+  
   
   //10회 미만으로 맞췄을때 실행
-    if (score < 3) {
+    
   
     imgMatch(selectedCourse);
         $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
