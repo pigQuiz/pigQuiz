@@ -160,9 +160,6 @@ const korea = [
     {food : '팔보채',
     img : './photo/팔보채.jpg'},
     
-    {food : '유타오',
-    img : './photo/유타오.jpg'},
-    
     {food : '어향육사',
     img : './photo/어향육사.jpg'},
     
@@ -193,15 +190,6 @@ const korea = [
     {
         food: "짜장면",
         img : './photo/짜장면.jpg'
-    },
-    {
-        food: "양장피",
-        img : './photo/양장피.jpg'
-    },
-
-    {
-        food: "짜조면",
-        img : './photo/짜조면.jpg'
     },
   
 
@@ -295,23 +283,6 @@ const Western = [
     {food : '맥앤치즈',
     img : './photo/맥앤치즈.jpg'},
 
-    {food : '라쟈냐',
-    img : './photo/라쟈냐.jpg'},
-   
-    { food: "바베큐립", 
-    img : './photo/바베큐립.jpg'
-},
-    { food: "양고기스튜" ,
-    img : './photo/양고기스튜.jpg'
-},
-
-    { food: "비프부르기뇽",
-    img : './photo/비프부르기뇽.jpg'
-},
-
-    { food: "바게트",
-    img : './photo/바게트.jpg'
-},
     { food: "치킨너겟",
     img : './photo/치킨너겟.jpg'
 },
@@ -325,17 +296,7 @@ const Western = [
     { food: "참치샐러드" ,
     img : './photo/참치샐러드.jpg'
 },
-    { food: "스파게티", 
-    img : './photo/스파게티.jpg'
-},
 
-    { food: "까르보나라" ,
-    img : './photo/까르보나라.jpg'
-},
-  
-    { food: "치킨브로콜리" ,
-    img : './photo/치킨브로콜리.jpg'
-},
     { food: "치즈케이크", 
     img : './photo/치즈케이크.jpg'
 },
@@ -454,9 +415,6 @@ const all = [
     
     {food : '팔보채',
     img : './photo/팔보채.jpg'},
-    
-    {food : '유타오',
-    img : './photo/유타오.jpg'},
     
     {food : '어향육사',
     img : './photo/어향육사.jpg'},
