@@ -369,9 +369,10 @@ function corrected() { // 정답일때 나오는 함수
   //   $score.style.width = '100px';
     $score.textContent = '  ' + score + ' 점';
     $inputAnswer.value = '';
-    console.log('맞음');
+    // console.log('맞음');
     //정답일때 돼지가 앙
-    if (score < 3) {
+    console.log(score);
+    if (score < 5) {
   $imgbox.animate([
     // {transform : 'scale(0.2)'},
     {
@@ -413,6 +414,7 @@ function corrected() { // 정답일때 나오는 함수
       clearInterval(timeSurv);
       timeAttack();
     } else {
+      let objImg = document.getElementById('foodimg');
       objImg.setAttribute('src', '../돼지테스트/기본.png');
       $crownPig.setAttribute('style',  'z-index: 3; visibility: visible');
     $timer.textContent = `남은시간 :`;

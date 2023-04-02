@@ -539,11 +539,6 @@ const hard = [
 
   },
   {
-    country: '스폐인',
-    img: './photo/스폐인.jpg'
-
-  },
-  {
     country: '싱가포르',
     img: './photo/싱가포르.jpg'
 
@@ -744,6 +739,8 @@ function startGameBtn() {
     $level.disabled = true;
     const $timeSelectt = document.querySelector('.timeSelect')
     $timeSelectt.disabled = true;
+    //시작버튼 누르면 돼지 밑으로 내리기 
+  $pig.style.cssText = '  margin-top: 300px;';
 
     window.scrollTo({ // 시작버튼 누르면 스크롤 자동으로 내려주기
       top: document.body.scrollHeight, // <- 페이지 총 Height
@@ -831,6 +828,15 @@ function rdimg() { // 랜덤 숫자 리턴 함수
 
 function corrected() { // 정답일때 나오는 함수
     //정답일때 돼지가 앙
+
+    $correct.textContent = '정답입니다!!';
+    score++;
+  //   $score.style.width = '100px';
+    $score.textContent = '  ' + score + ' 점';
+    $inputAnswer.value = '';
+    // console.log('맞음');
+
+     if (score < 5) {
   $imgbox.animate([
     // {transform : 'scale(0.2)'},
     {
@@ -868,21 +874,18 @@ function corrected() { // 정답일때 나오는 함수
   ], 1000);
 
 
-  $correct.textContent = '정답입니다!!';
-    score++;
-  //   $score.style.width = '100px';
-    $score.textContent = '  ' + score + ' 점';
-    $inputAnswer.value = '';
-    console.log('맞음');
+  
   
   //10회 미만으로 맞췄을때 실행
-    if (score < 3) {
+   
   
     imgMatch(selectedCourse);
         $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
       clearInterval(timeSurv);
       timeAttack();
     } else {
+       let objImg = document.getElementById('foodimg');
+    objImg.setAttribute('src', '../돼지테스트/기본.png');
       $crownPig.setAttribute('style',  'z-index: 3; visibility: visible');
     $timer.textContent = `남은시간 :`;
     clearInterval(timeSurv);
@@ -897,7 +900,7 @@ function failed() { // 틀렸을때 나오는 함수
       $imgbox.appendChild($newImg);
       let objImg = document.getElementById('foodimg');
   objImg.setAttribute('src', '../돼지테스트/기본.png');
-  console.log('땡');
+  // console.log('땡');
   $boomPig.setAttribute('style', 'z-index: 3; visibility: visible');
   // $pigLife[countLife].classList.add('hidden');
   $inputAnswer.value = '';
