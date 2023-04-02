@@ -273,12 +273,6 @@ const Japan = [
     {food : '야키토리',
     img : './photo/야키토리.jpg'},
 
-    {food : '타코야끼',
-    img : './photo/타코야끼.jpg'},
-
-    {food : '우메보시',
-    img : './photo/우메보시.jpg'},
- 
     {food : '우동',
     img : './photo/우동.jpg'},
 
