@@ -1,12 +1,4 @@
-const Moviee = [{
-    movie: '건축학개론',
-    img: './movie/건축학개론.jpg'
-  },
-  
-  {
-    movie: '겨울왕국',
-    img: './movie/겨울왕국.jpg'
-  },
+const Moviee = [
   {
     movie: '광해',
     img: './movie/광해.jpg'
@@ -16,114 +8,165 @@ const Moviee = [{
     img: './movie/국가대표.jpg'
   },
   {
-    movie: '기생충',
-    img: './movie/기생충.jpg'
-  },
-  {
     movie: '나홀로집에',
     img: './movie/나홀로집에.jpg'
-  },
-  {
-    movie: '노트북',
-    img: './movie/노트북.jpg'
-  },
-  {
-    movie: '라라랜드',
-    img: './movie/라라랜드.jpg'
-  },
-  {
-    movie: '라붐',
-    img: './movie/라붐.jpg'
-  },
-  {
-    movie: '레옹',
-    img: './movie/레옹.jpg'
-  },
-  {
-    movie: '범죄와의전쟁',
-    img: './movie/범죄와의전쟁.jpg'
-  },
-  {
-    movie: '부산행',
-    img: './movie/부산행.jpg'
-  },
-  {
-    movie: '스타워즈',
-    img: './movie/스타워즈.jpg'
   },
   {
     movie: '써니',
     img: './movie/써니.jpg'
   },
   {
-    movie: '아바타',
-    img: './movie/아바타.jpg'
-  },
-  {
-    movie: '아이언맨',
-    img: './movie/아이언맨.jpg'
-  },
-  {
-    movie: '아저씨',
-    img: './movie/아저씨.jpg'
-  },
-  {
-    movie: '알라딘',
-    img: './movie/알라딘.jpg'
-  },
-  {
-    movie: '암살',
-    img: './movie/암살.jpg'
-  },
-  {
-    movie: '어바웃타임',
-    img: './movie/어바웃타임.jpg'
-  },
-  {
-    movie: '어벤져스',
-    img: './movie/어벤져스.jpg'
-  },
-  {
-    movie: '어벤져스',
-    img: './movie/엑시트.jpg'
-  },
-  {
-    movie: '이티',
-    img: './movie/이티.jpg'
-  },
-  {
     movie: '인턴',
     img: './movie/인턴.jpg'
-  },
-  {
-    movie: '조커',
-    img: './movie/조커.jpg'
-  },
-  {
-    movie: '코코',
-    img: './movie/코코.jpg'
-  },
-  {
-    movie: '킹스맨',
-    img: './movie/킹스맨.jpg'
-  },
-  {
-    movie: '타이타닉',
-    img: './movie/타이타닉.jpg'
-  },
-  {
-    movie: '토이스토리',
-    img: './movie/토이스토리.jpg'
-  },
-  {
-    movie: '트랜스포머',
-    img: './movie/트랜스포머.jpg'
-  },
-  {
-    movie: '해리포터',
-    img: './movie/해리포터.jpg'
-  },
+  }];
+
+
+  const animation = [
+    {
+      movie: '코코',
+      img: './movie/코코.jpg'
+    },
+  
+    {
+      movie: '토이스토리',
+      img: './movie/토이스토리.jpg'
+    },
+    {
+      movie: '알라딘',
+      img: './movie/알라딘.jpg'
+    },
+    {
+      movie: '겨울왕국',
+      img: './movie/겨울왕국.jpg'
+    },
+    {
+      movie: '포뇨',
+      img: './movie/포뇨.jpg'
+    },
+    {
+      movie: '토토로',
+      img: './movie/토토로.jpg'
+    },
+
   ];
+  
+  const romance = [
+    {
+      movie: '500일의 썸머',
+      img: './movie/500일의썸머.jpg'
+    },
+    {
+      movie: '이터널선샤인',
+      img: './movie/이터널선샤인.jpg'
+    },
+    {
+      movie: '키싱부스',
+      img: './movie/키싱부스.jpg'
+    },
+    {
+      movie: '건축학개론',
+      img: './movie/건축학개론.jpg'
+    },
+    {
+      movie: '노트북',
+      img: './movie/노트북.jpg'
+    },
+    {
+      movie: '타이타닉',
+      img: './movie/타이타닉.jpg'
+    },
+    {
+      movie: '어바웃타임',
+      img: './movie/어바웃타임.jpg'
+    },
+    {
+      movie: '라붐',
+      img: './movie/라붐.jpg'
+    },
+    {
+      movie: '라라랜드',
+      img: './movie/라라랜드.jpg'
+    },
+    {
+      movie: '미비포유',
+      img: './movie/미비포유.jpg'
+    }
+  ];
+
+  const fantage = [
+    {
+      movie: '부산행',
+      img: './movie/부산행.jpg'
+    },
+    {
+      movie: '스타워즈',
+      img: './movie/스타워즈.jpg'
+    },
+    {
+      movie: '트랜스포머',
+      img: './movie/트랜스포머.jpg'
+    },
+    {
+      movie: '해리포터',
+      img: './movie/해리포터.jpg'
+    },
+    {
+      movie: '어벤져스',
+      img: './movie/어벤져스.jpg'
+    },
+    {
+      movie: '이티',
+      img: './movie/이티.jpg'
+    },
+    {
+      movie: '아바타',
+      img: './movie/아바타.jpg'
+    },
+    {
+      movie: '아이언맨',
+      img: './movie/아이언맨.jpg'
+    },
+    {
+      movie: '늑대소년',
+      img: './movie/늑대소년.jpg'
+    }
+  ];
+
+  const noir = [
+    {
+      movie: '기생충',
+      img: './movie/기생충.jpg'
+    },
+    {
+      movie: '레옹',
+      img: './movie/레옹.jpg'
+    },
+    {
+      movie: '범죄와의전쟁',
+      img: './movie/범죄와의전쟁.jpg'
+    },
+    {
+      movie: '아저씨',
+      img: './movie/아저씨.jpg'
+    },
+    {
+      movie: '암살',
+      img: './movie/암살.jpg'
+    },
+    {
+      movie: '엑시트',
+      img: './movie/엑시트.jpg'
+    },
+    {
+      movie: '킹스맨',
+      img: './movie/킹스맨.jpg'
+    },
+    {
+      movie: '조커',
+      img: './movie/조커.jpg'
+    }
+  ];
+
 
 
 const $level = document.querySelector('.levelselect'); //코스 선택하면 카테고리 보이기
@@ -189,31 +232,31 @@ $catalog.forEach(($btn) => { // 선택해야할 코스들
     });
 
     if ($btn.getAttribute('id') === 'korea') {
-      selectedCourse = Moviee;
+      selectedCourse = romance;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'japan') {
-      selectedCourse = Moviee;
+      selectedCourse = noir;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'western') {
-      selectedCourse = Moviee;
+      selectedCourse = fantage;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'total') {
-      selectedCourse = Moviee;
+      selectedCourse = Moviee.concat(romance,noir,fantage,animation);
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else {
-      selectedCourse = Moviee;
+      selectedCourse = animation;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
@@ -364,13 +407,7 @@ function corrected() { // 정답일때 나오는 함수
       transform: 'rotateY(30deg)'
     },
   ], 1000);
-
-
-  
-  
   //10회 미만으로 맞췄을때 실행
-    
-  
     imgMatch(selectedCourse);
         $timer.textContent = `남은시간 : ${makeGameData().timeSelect()}`;
       clearInterval(timeSurv);
