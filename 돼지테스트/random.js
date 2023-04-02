@@ -73,8 +73,6 @@ const korea = [
 
      { food: "산채비빔밥", img: "./photo/산채비빔밥.jpg" },
 
-     { food: "갈비살 구이", img: "./photo/갈비살 구이.jpg" },
-
      { food: "된장찌개", img: "./photo/된장찌개.jpg" },
 
      { food: "잡탕", img: "./photo/잡탕.jpg" },
@@ -309,10 +307,6 @@ const Western = [
 },
     { food: "양고기스튜" ,
     img : './photo/양고기스튜.jpg'
-},
- 
-    { food: "팝콘감자", //테이터 토츠 
-    img : './photo/팝콘감자.jpg'
 },
 
     { food: "비프부르기뇽",
@@ -565,8 +559,6 @@ const all = [
     {food : '핫도그',
     img : './photo/핫도그.jpg'},
 
-    {food : '라쟈냐',
-    img : './photo/라쟈냐.jpg'},
 
 ];
 

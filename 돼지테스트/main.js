@@ -457,31 +457,31 @@ $btn.onclick = function () {
 
   if ($btn.getAttribute('id') === 'korea') {
     selectedCourse = korea;
-    console.log(selectedCourse);
+    // console.log(selectedCourse);
     $level.disabled = true;
     // imgMatch(selectedCourse);
 
   } else if ($btn.getAttribute('id') === 'japan') {
     selectedCourse = Japan;
-    console.log(selectedCourse);
+    // console.log(selectedCourse);
     $level.disabled = true;
     // imgMatch(selectedCourse);
 
   } else if ($btn.getAttribute('id') === 'western') {
     selectedCourse = Western;
-    console.log(selectedCourse);
+    // console.log(selectedCourse);
     $level.disabled = true;
     // imgMatch(selectedCourse);
 
   } else if ($btn.getAttribute('id') === 'total') {
     selectedCourse = korea.concat(Japan, China, Western);
-    console.log(selectedCourse);
+    // console.log(selectedCourse);
     $level.disabled = true;
     // imgMatch(selectedCourse);
 
   } else {
     selectedCourse = China;
-    console.log(selectedCourse);
+    // console.log(selectedCourse);
     $level.disabled = true;
     // imgMatch(selectedCourse);
 
@@ -567,7 +567,7 @@ $inputAnswer.onkeyup = (e) => {
       clearInterval(timeSurv);
       timeAttack();
       imgMatch(selectedCourse);
-      console.log(countLife);
+      // console.log(countLife);
       if (countLife === 0) {
         $inputAnswer.disabled = true;
         failed();
@@ -597,10 +597,10 @@ $correct.textContent = '정답입니다!!';
 //   $score.style.width = '100px';
   $score.textContent = '  ' + score + ' 점';
   $inputAnswer.value = '';
-  console.log('맞음');
+  // console.log('맞음');
 
 //10회 미만으로 맞췄을때 실행
-  if (score < 3) {
+  if (score < 5) {
     $imgbox.animate([
       // {transform : 'scale(0.2)'},
       {
@@ -662,7 +662,7 @@ let $newImg = document.createElement('img');
     $imgbox.appendChild($newImg);
     let objImg = document.getElementById('foodimg');
 objImg.setAttribute('src', '../돼지테스트/기본.png');
-console.log('땡');
+// console.log('땡');
 $boomPig.setAttribute('style', 'z-index: 3; visibility: visible');
 // $pigLife[countLife].classList.add('hidden');
 $inputAnswer.value = '';
@@ -699,7 +699,7 @@ timeSurv = setInterval(function () { // 난이도에 따라 타이머 설정
       clearInterval(timeSurv);
       timeAttack();
       imgMatch(selectedCourse);
-      console.log(countLife);
+      // console.log(countLife);
       if (countLife === 0) {
         $inputAnswer.disabled = true;
         failed();
