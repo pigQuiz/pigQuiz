@@ -152,9 +152,9 @@ let $fade = document.querySelector('.fadeffect');
 var timeSurv;
 let countLife = 3;
 
-const $pigLife = document.querySelectorAll('.piglife');
-const $crownPig = document.querySelector('.animated-entity-symbol');
-const $boomPig = document.querySelector('.animated-entity-symbol2');
+const $pigLife = document.querySelectorAll('.piglife');//목숨 개 
+const $crownPig = document.querySelector('.animated-entity-symbol'); //다 맞았을때 이미지 
+const $boomPig = document.querySelector('.animated-entity-symbol2');//오답일때 폭탄
 const $pigs = document.querySelector('.pigs');
 
 
@@ -189,31 +189,31 @@ $catalog.forEach(($btn) => { // 선택해야할 코스들
     });
 
     if ($btn.getAttribute('id') === 'korea') {
-      selectedCourse = korea;
+      selectedCourse = Moviee;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'japan') {
-      selectedCourse = Japan;
+      selectedCourse = Moviee;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'western') {
-      selectedCourse = Western;
+      selectedCourse = Moviee;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else if ($btn.getAttribute('id') === 'total') {
-      selectedCourse = korea.concat(Japan, China, Western);
+      selectedCourse = Moviee;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
 
     } else {
-      selectedCourse = China;
+      selectedCourse = Moviee;
       console.log(selectedCourse);
       $level.disabled = true;
       // imgMatch(selectedCourse);
