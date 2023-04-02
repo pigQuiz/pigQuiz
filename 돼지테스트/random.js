@@ -93,10 +93,6 @@ const korea = [
 
      { food: "알탕", img: "./photo/알탕.jpg" },
 
-     { food: "쭈꾸미 볶음", img: "./photo/쭈꾸미 볶음.jpg" },
-
-     { food: "삼색만두", img: "./photo/삼색만두.jpg" },
-
      { food: "냉모밀", img: "./photo/냉모밀.jpg" },
 
      { food: "미소된장국", img: "./photo/미소된장국.jpg" },
@@ -204,38 +200,9 @@ const korea = [
         food: "양장피",
         img : './photo/양장피.jpg'
     },
-    {
-        food: "샤오롱바오",
-        img : './photo/샤오롱바오.jpg'
-    },
 
     {
-        food: "삼선육면",
-        img : './photo/삼선육면.jpg'
-    },
-    {
-        food: "크림새우",
-        img : './photo/크림새우.jpg'
-    },
-    {
-        food: "탕수육",
-        img : './photo/탕수육.jpg'
-    },
-
-    {
-        food: "산쑤새우",
-        img : './photo/산쑤새우.jpg'
-    },
-    {
-        food: "산촌식닭찜",
-        img : './photo/산촌식닭찜.jpg'
-    },
-    {
-        food: "산미구이",
-        img : './photo/산미구이.jpg'
-    },
-    {
-        "food": "짜조면",
+        food: "짜조면",
         img : './photo/짜조면.jpg'
     },
   
@@ -273,8 +240,6 @@ const Japan = [
     {food : '야키토리',
     img : './photo/야키토리.jpg'},
 
-    {food : '타코야끼',
-    img : './photo/타코야끼.jpg'},
 
     {food : '우메보시',
     img : './photo/우메보시.jpg'},
@@ -295,17 +260,8 @@ const Japan = [
     },
 
     {
-        food: "텐동",
-        img : './photo/텐동.jpg'
-    },
-    {
         food: "야끼소바",
         img : './photo/야끼소바.jpg'
-    },
-
-    {
-        food: "장어덮밥",
-        img : './photo/장어덮밥.jpg'
     },
 
 
@@ -323,9 +279,6 @@ const Western = [
 
     {food : '햄버거',
     img : './photo/햄버거.jpg'},
-
-    {food : '피자',
-    img : './photo/피자.jpg'},
 
     {food : '리조또',
     img : './photo/리조또.jpg'},
@@ -348,32 +301,14 @@ const Western = [
     {food : '맥앤치즈',
     img : './photo/맥앤치즈.jpg'},
 
-    {food : '핫도그',
-    img : './photo/핫도그.jpg'},
-
     {food : '라쟈냐',
     img : './photo/라쟈냐.jpg'},
-    
-    { food: "스테이크", 
-    img : './photo/스테이크.jpg'
-},
    
     { food: "바베큐립", 
     img : './photo/바베큐립.jpg'
 },
-    { food: "치킨샐러드",
-    img : './photo/치킨샐러드.jpg'
-},
-
-    { food: "랍스터비스크",
-    img : './photo/랍스터비스크.jpg'
-},
     { food: "양고기스튜" ,
     img : './photo/양고기스튜.jpg'
-},
-  
-    { food: "샌드위치",
-    img : './photo/샌드위치.jpg'
 },
  
     { food: "팝콘감자", //테이터 토츠 
@@ -383,17 +318,12 @@ const Western = [
     { food: "비프부르기뇽",
     img : './photo/비프부르기뇽.jpg'
 },
-    { food: "베이컨",
-    img : './photo/베이컨.jpg'
-},
+
     { food: "바게트",
     img : './photo/바게트.jpg'
 },
     { food: "치킨너겟",
     img : './photo/치킨너겟.jpg'
-},
-    { food: "쉬림프스캠피", 
-    img : './photo/쉬림프스캠피.jpg'
 },
 
     { food: "멕시칸샐러드",
@@ -401,9 +331,6 @@ const Western = [
 },
     { food: "쉬림프샐러드",
     img : './photo/쉬림프샐러드.jpg'
-},
-    { food: "카레", 
-    img : './photo/카레.jpg'
 },
     { food: "참치샐러드" ,
     img : './photo/참치샐러드.jpg'
@@ -415,14 +342,6 @@ const Western = [
     { food: "까르보나라" ,
     img : './photo/까르보나라.jpg'
 },
- 
-    { food: "소시지" ,
-    img : './photo/소시지.jpg'
-},
-
-    { food: "크로와상" ,
-    img : './photo/크로와상.jpg'
-},
   
     { food: "치킨브로콜리" ,
     img : './photo/치킨브로콜리.jpg'
@@ -431,9 +350,6 @@ const Western = [
     img : './photo/치즈케이크.jpg'
 },
 
-    { food: "카프레제",
-    img : './photo/카프레제.jpg'
-}
 
 ];
 
@@ -609,9 +525,6 @@ const all = [
     {food : '타코야끼',
     img : './photo/타코야끼.jpg'},
 
-    {food : '우메보시',
-    img : './photo/우메보시.jpg'},
-
     {food : '우동',
     img : './photo/우동.jpg'},
 
@@ -621,17 +534,12 @@ const all = [
     {food : '규동',
     img : './photo/규동.jpg'},
 
-    {food : '파스타',
-    img : './photo/파스타.jpg'},
 
     {food : '피쉬앤칩스',
     img : './photo/피쉬앤칩스.jpg'},
 
     {food : '햄버거',
     img : './photo/햄버거.jpg'},
-
-    {food : '피자',
-    img : './photo/피자.jpg'},
 
     {food : '리조또',
     img : './photo/리조또.jpg'},
@@ -661,3 +569,5 @@ const all = [
     img : './photo/라쟈냐.jpg'},
 
 ];
+
+export {korea,China,Japan,Western,all};
